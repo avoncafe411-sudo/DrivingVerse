@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="DrivingVerse brings premium browser driving games, thrilling races, parking challenges, and off-road adventures in one polished experience."
+    />
+    <meta name="theme-color" content="#111827" />
+    <meta property="og:title" content="DrivingVerse | Premium Browser Driving Games" />
+    <meta
+      property="og:description"
+      content="Explore curated driving games for cars, trucks, bikes, buses, parking, and off-road missions."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1200&q=80" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>DrivingVerse | Premium Browser Driving Games</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/svg+xml" href="icons/favicon.svg" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <button class="scroll-top" id="scrollTop" type="button" aria-label="Scroll to top">↑</button>
+
+    <header class="site-header">
+      <div class="container nav-shell">
+        <a class="brand" href="index.html" aria-label="DrivingVerse home">
+          <span class="brand-mark">D</span>
+          <span>DrivingVerse</span>
+        </a>
+
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="siteNavigation"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle color theme">
+          <span aria-hidden="true">☀</span>
+        </button>
+
+        <nav class="site-nav" id="siteNavigation" aria-label="Primary navigation">
+          <a class="active" href="index.html">Home</a>
+          <a href="#featured">Featured</a>
+          <a href="#categories">Categories</a>
+          <a href="pages/about.html">About</a>
+          <a href="pages/contact.html">Contact</a>
+        </nav>
+
+        <form class="search-bar" role="search">
+          <label class="sr-only" for="siteSearch">Search driving games</label>
+          <input id="siteSearch" type="search" placeholder="Search games" autocomplete="off" />
+        </form>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Browser driving games, elevated</p>
+            <h1>Drive your next obsession in a premium arcade universe.</h1>
+            <p>
+              Jump into fast-paced racing, realistic parking, off-road explorer missions, and high-energy
+              truck and bus challenges—curated for every kind of driver.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#featured">Play now</a>
+              <a class="btn btn-secondary" href="pages/about.html">Explore the collection</a>
+            </div>
+            <ul class="hero-stats" aria-label="DrivingVerse highlights">
+              <li><strong>120+</strong><span>Free games</span></li>
+              <li><strong>4.8/5</strong><span>Average rating</span></li>
+              <li><strong>24/7</strong><span>Instant play</span></li>
+            </ul>
+          </div>
+
+          <div class="hero-card" aria-label="Featured driving game preview">
+            <div class="hero-card__badge">New season</div>
+            <img src="images/game-placeholder.svg" alt="Stylized racing car illustration" loading="eager" />
+            <div class="hero-card__content">
+              <h2>Turbo Drift Arena</h2>
+              <p>Outrun rivals, master sharp turns, and unlock the ultimate street setup.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="categories">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Browse by flavor</p>
+            <h2>Popular categories</h2>
+          </div>
+          <div class="category-grid" role="list" aria-label="Game categories">
+            <button class="category-chip active" type="button" data-category="All">All</button>
+            <button class="category-chip" type="button" data-category="Car">Car</button>
+            <button class="category-chip" type="button" data-category="Truck">Truck</button>
+            <button class="category-chip" type="button" data-category="Bus">Bus</button>
+            <button class="category-chip" type="button" data-category="Bike">Bike</button>
+            <button class="category-chip" type="button" data-category="Tractor">Tractor</button>
+            <button class="category-chip" type="button" data-category="Police">Police</button>
+            <button class="category-chip" type="button" data-category="Parking">Parking</button>
+            <button class="category-chip" type="button" data-category="Racing">Racing</button>
+            <button class="category-chip" type="button" data-category="Off-road">Off-road</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="featured">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Featured</p>
+            <h2>Top picks for the week</h2>
+          </div>
+          <div class="games-grid" id="featuredGames" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section class="section section-alt">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Trending</p>
+            <h2>Most played right now</h2>
+          </div>
+          <div class="games-grid" id="trendingGames" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Fresh arrivals</p>
+            <h2>Recently added</h2>
+          </div>
+          <div class="games-grid" id="recentGames" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section class="section section-alt">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Hall of fame</p>
+            <h2>Popular games</h2>
+          </div>
+          <div class="games-grid" id="popularGames" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section class="section cta-section">
+        <div class="container cta-card">
+          <div>
+            <p class="eyebrow">Ready to hit the road?</p>
+            <h2>Build your perfect driving lineup today.</h2>
+            <p>Start with one game and stay for the full collection of high-speed adventures.</p>
+          </div>
+          <a class="btn btn-primary" href="#featured">Start playing</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-shell">
+        <div>
+          <a class="brand brand-footer" href="index.html">
+            <span class="brand-mark">D</span>
+            <span>DrivingVerse</span>
+          </a>
+          <p>Premium browser driving games with a smooth, modern feel.</p>
+        </div>
+        <div class="footer-links">
+          <a href="pages/about.html">About</a>
+          <a href="pages/contact.html">Contact</a>
+          <a href="pages/privacy.html">Privacy</a>
+          <a href="pages/terms.html">Terms</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

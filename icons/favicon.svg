@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-label="DrivingVerse favicon">
+  <rect width="64" height="64" rx="16" fill="#111827"/>
+  <path d="M18 44h28" stroke="#2563EB" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="24" cy="38" r="5" fill="#2563EB"/>
+  <circle cx="40" cy="38" r="5" fill="#2563EB"/>
+  <path d="M21 24h22l-3 10H24z" fill="#F9FAFB"/>
+  <path d="M24 20l-4-6" stroke="#F9FAFB" stroke-width="4" stroke-linecap="round"/>
+  <path d="M40 20l4-6" stroke="#F9FAFB" stroke-width="4" stroke-linecap="round"/>
+</svg>
