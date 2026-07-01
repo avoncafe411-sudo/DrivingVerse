@@ -121,11 +121,19 @@ const games = [
 
 function filterGames() {
   const normalizedSearch = appState.searchTerm.trim().toLowerCase();
-  const categoryMatch = appState.currentCategory === 'All' || game => game.category === appState.currentCategory;
 
   const visibleGames = games.filter((game) => {
-    const matchesCategory = appState.currentCategory === 'All' ? true : game.category === appState.currentCategory;
-    const matchesSearch = !normalizedSearch || `${game.title} ${game.category} ${game.description}`.toLowerCase().includes(normalizedSearch);
+    const matchesCategory =
+      appState.currentCategory === 'All'
+        ? true
+        : game.category === appState.currentCategory;
+
+    const matchesSearch =
+      !normalizedSearch ||
+      `${game.title} ${game.category} ${game.description}`
+        .toLowerCase()
+        .includes(normalizedSearch);
+
     return matchesCategory && matchesSearch;
   });
 
