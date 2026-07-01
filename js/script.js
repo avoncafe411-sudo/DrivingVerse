@@ -17,6 +17,19 @@ const games = [
     popular: true,
   },
   {
+    title: 'Fireboy and Watergirl',
+    category: 'Racing',
+    rating: '4.8',
+    description: 'Play Fireboy and Watergirl online for free on DrivingVerse.',
+    image: 'images/game-placeholder.svg',
+    featured: true,
+    trending: false,
+    recent: true,
+    popular: false,
+    link: 'games/fireboy-and-watergirl.html',
+    buttonText: 'Play Now',
+  },
+  {
     title: 'Mountain Offroad Rush',
     category: 'Off-road',
     rating: '4.8',
@@ -135,7 +148,7 @@ function createGameCard(game) {
       </div>
       <p>${game.description}</p>
       <div class="game-card__footer">
-        <a href="#" aria-label="Play ${game.title}">Play now</a>
+        <a href="${game.link || '#'}" aria-label="Play ${game.title}">${game.buttonText || 'Play now'}</a>
       </div>
     </div>
   `;
