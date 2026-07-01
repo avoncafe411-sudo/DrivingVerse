@@ -1,4 +1,5 @@
 User-agent: *
+
 Allow: /
 
-Sitemap: https://example.com/sitemap.xml
+Sitemap: https://avoncafe411-sudo.github.io/DrivingVerse/sitemap.xml
