@@ -512,6 +512,58 @@ input:focus-visible {
   box-shadow: var(--shadow);
 }
 
+.error-page {
+  padding: 4.5rem 0 3.5rem;
+}
+
+.error-shell {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 2rem;
+  align-items: center;
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.16), rgba(31, 41, 55, 0.9));
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow);
+}
+
+.error-copy h2 {
+  margin: 0 0 0.8rem;
+  font-size: clamp(1.4rem, 2.3vw, 2rem);
+  line-height: 1.2;
+}
+
+.error-number {
+  margin: 0 0 0.4rem;
+  font-size: clamp(4rem, 10vw, 7.5rem);
+  line-height: 0.95;
+  color: white;
+}
+
+.error-text {
+  margin: 0 0 1.4rem;
+  color: var(--muted);
+  max-width: 560px;
+}
+
+.error-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.error-illustration {
+  display: grid;
+  place-items: center;
+}
+
+.error-illustration img {
+  width: min(100%, 360px);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow);
+}
+
 .site-footer {
   padding: 2rem 0 3rem;
   color: var(--muted);
@@ -578,6 +630,14 @@ input:focus-visible {
     grid-template-columns: 1fr;
   }
 
+  .error-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .error-illustration {
+    order: -1;
+  }
+
   .games-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -621,6 +681,19 @@ input:focus-visible {
 
   .hero-stats {
     flex-direction: column;
+  }
+
+  .error-page {
+    padding-top: 3rem;
+  }
+
+  .error-shell {
+    padding: 1.5rem;
+  }
+
+  .error-actions {
+    flex-direction: column;
+    align-items: stretch;
   }
 
   .games-grid {
