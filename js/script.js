@@ -117,6 +117,21 @@ const games = [
     recent: true,
     popular: true,
   },
+
+{
+  title: 'Speed Racer',
+  category: 'Racing',
+  rating: '4.7',
+  description: 'Play Speed Racer online for free. Drive fast, avoid obstacles and survive as long as possible.',
+  image: 'images/game-placeholder.svg',
+  featured: true,
+  trending: true,
+  recent: true,
+  popular: true,
+  link: 'games/speed-racer.html',
+  buttonText: 'Play Now',
+},
+
 ];
 
 function filterGames() {
