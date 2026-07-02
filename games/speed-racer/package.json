@@ -1,0 +1,46 @@
+{
+  "name": "speed-racer-game",
+  "version": "1.0.0",
+  "description": "A professional car racing game built with pure JavaScript, HTML5 Canvas, and modern CSS",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "dev": "npx serve . --listen 3000",
+    "build": "echo 'No build process needed - static files only'",
+    "test": "echo 'No tests specified' && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Steve-IX/speed-racer-game.git"
+  },
+  "keywords": [
+    "javascript",
+    "html5",
+    "canvas",
+    "game",
+    "racing",
+    "car",
+    "browser-game",
+    "physics",
+    "arcade"
+  ],
+  "author": {
+    "name": "Steve-IX",
+    "email": "a.stephenyeboah04@gmail.com",
+    "url": "https://github.com/Steve-IX"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Steve-IX/speed-racer-game/issues"
+  },
+  "homepage": "https://github.com/Steve-IX/speed-racer-game#readme",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ]
+} 

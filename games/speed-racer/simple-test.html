@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Car Game Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #000;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        canvas {
+            border: 2px solid #ff6b00;
+            background: #111;
+        }
+        .info {
+            margin-top: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>🏎️ Simple Car Game Test</h1>
+    <canvas id="gameCanvas" width="800" height="600"></canvas>
+    <div class="info">
+        <p>Use WASD or Arrow Keys to control the car</p>
+        <p>Speed: <span id="speed">0</span> km/h</p>
+    </div>
+
+    <script>
+        // Simple Car Class
+        class SimpleCar {
+            constructor(x, y) {
+                this.x = x;
+                this.y = y;
+                this.angle = 0;
+                this.velocity = 0;
+                this.maxSpeed = 5;
+                this.acceleration = 0.2;
+                this.friction = 0.95;
+                this.turnSpeed = 0.03;
+                this.width = 20;
+                this.height = 40;
+            }
+            
+            update(controls) {
+                // Handle acceleration and braking
+                if (controls.up) {
+                    this.velocity += this.acceleration;
+                }
+                if (controls.down) {
+                    this.velocity -= this.acceleration * 0.7;
+                }
+                
+                // Apply friction
+                this.velocity *= this.friction;
+                
+                // Limit speed
+                if (this.velocity > this.maxSpeed) this.velocity = this.maxSpeed;
+                if (this.velocity < -this.maxSpeed * 0.5) this.velocity = -this.maxSpeed * 0.5;
+                
+                // Handle turning (only when moving)
+                if (Math.abs(this.velocity) > 0.1) {
+                    if (controls.left) {
+                        this.angle -= this.turnSpeed * (this.velocity / this.maxSpeed);
+                    }
+                    if (controls.right) {
+                        this.angle += this.turnSpeed * (this.velocity / this.maxSpeed);
+                    }
+                }
+                
+                // Calculate movement based on angle
+                const velocityX = Math.sin(this.angle) * this.velocity;
+                const velocityY = -Math.cos(this.angle) * this.velocity;
+                
+                // Update position
+                this.x += velocityX;
+                this.y += velocityY;
+                
+                // Keep car on screen
+                if (this.x < 0) this.x = 0;
+                if (this.x > 800) this.x = 800;
+                if (this.y < 0) this.y = 0;
+                if (this.y > 600) this.y = 600;
+            }
+            
+            draw(ctx) {
+                ctx.save();
+                
+                // Move to car position and rotate
+                ctx.translate(this.x, this.y);
+                ctx.rotate(this.angle);
+                
+                // Draw car body
+                ctx.fillStyle = '#ff3333';
+                ctx.fillRect(-this.width/2, -this.height/2, this.width, this.height);
+                
+                // Draw windshield
+                ctx.fillStyle = 'rgba(135, 206, 235, 0.7)';
+                ctx.fillRect(-this.width/3, -this.height/3, this.width*2/3, this.height/3);
+                
+                // Draw headlights
+                ctx.fillStyle = '#ffffff';
+                ctx.fillRect(-this.width/3, -this.height/2, 6, 6);
+                ctx.fillRect(this.width/3-6, -this.height/2, 6, 6);
+                
+                ctx.restore();
+            }
+            
+            getSpeed() {
+                return Math.abs(this.velocity);
+            }
+            
+            getSpeedKmh() {
+                return Math.round(this.getSpeed() * 20); // Convert to km/h for display
+            }
+        }
+
+        // Simple Game Logic
+        const canvas = document.getElementById('gameCanvas');
+        const ctx = canvas.getContext('2d');
+        const speedDisplay = document.getElementById('speed');
+
+        const car = new SimpleCar(400, 300);
+        
+        const controls = {
+            up: false,
+            down: false,
+            left: false,
+            right: false
+        };
+
+        // Event listeners
+        document.addEventListener('keydown', (e) => {
+            switch(e.code) {
+                case 'ArrowUp':
+                case 'KeyW':
+                    controls.up = true;
+                    e.preventDefault();
+                    break;
+                case 'ArrowDown':
+                case 'KeyS':
+                    controls.down = true;
+                    e.preventDefault();
+                    break;
+                case 'ArrowLeft':
+                case 'KeyA':
+                    controls.left = true;
+                    e.preventDefault();
+                    break;
+                case 'ArrowRight':
+                case 'KeyD':
+                    controls.right = true;
+                    e.preventDefault();
+                    break;
+            }
+        });
+
+        document.addEventListener('keyup', (e) => {
+            switch(e.code) {
+                case 'ArrowUp':
+                case 'KeyW':
+                    controls.up = false;
+                    break;
+                case 'ArrowDown':
+                case 'KeyS':
+                    controls.down = false;
+                    break;
+                case 'ArrowLeft':
+                case 'KeyA':
+                    controls.left = false;
+                    break;
+                case 'ArrowRight':
+                case 'KeyD':
+                    controls.right = false;
+                    break;
+            }
+        });
+
+        // Game loop
+        function gameLoop() {
+            // Clear canvas
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            // Draw simple track background
+            ctx.fillStyle = '#2d5016';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            ctx.fillStyle = '#333333';
+            ctx.fillRect(50, 50, canvas.width - 100, canvas.height - 100);
+            
+            // Update and draw car
+            car.update(controls);
+            car.draw(ctx);
+            
+            // Update speed display
+            speedDisplay.textContent = car.getSpeedKmh();
+            
+            // Continue game loop
+            requestAnimationFrame(gameLoop);
+        }
+
+        console.log('🏎️ Simple car game starting...');
+        gameLoop();
+    </script>
+</body>
+</html> 
