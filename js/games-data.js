@@ -20,9 +20,9 @@ window.games = [
 
     buttonText: "Play Now",
 
-    link: "games/extreme-car-driving-simulator.html",
+    link: "css/games/extreme-car-driving-simulator.html",
 
-    detailUrl: "games/extreme-car-driving-simulator.html",
+    detailUrl: "css/games/extreme-car-driving-simulator.html",
 
     url: "https://html5.gamemonetize.co/wtmr1ws4khywnki9fm53csa0txss21tb/",
 
