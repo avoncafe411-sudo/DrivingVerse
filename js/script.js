@@ -132,6 +132,20 @@ const games = [
   buttonText: 'Play Now',
 },
 
+{
+  title: 'Drift Car Driving',
+  category: 'Racing',
+  rating: '4.9',
+  description: 'High-speed drifting and highway racing with realistic driving.',
+  image: 'https://img.gamemonetize.com/psaxcnaaudnghwtus0rvv9lsb3gczzxv/512x384.jpg',
+  featured: true,
+  trending: true,
+  recent: true,
+  popular: true,
+  link: 'games/drift-car-driving.html',
+  buttonText: 'Play Now',
+},
+
 ];
 
 function filterGames() {
