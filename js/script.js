@@ -146,7 +146,6 @@ const games = [
   buttonText: 'Play Now',
 },
 
-,
 
   {
     title: 'Offroad Jeep Game: SUV Driving',
@@ -418,6 +417,7 @@ function filterGames() {
 }
 
 function createGameCard(game) {
+  const ratingValue = game.rating ? game.rating : '4.5';
   const card = document.createElement('article');
   card.className = 'game-card';
   card.innerHTML = `
@@ -428,12 +428,10 @@ function createGameCard(game) {
         <span class="badge">${game.category}</span>
       </div>
       <div class="meta-row">
-        <span class="rating">★ ${game.rating}</span>
-        <span>${game.category}</span>
+        <span class="rating">⭐ ${ratingValue}</span>
       </div>
-      <p>${game.description}</p>
       <div class="game-card__footer">
-        <a href="${game.link || '#'}" aria-label="Play ${game.title}">${game.buttonText || 'Play now'}</a>
+        <a href="${game.link || '#'}" aria-label="Play ${game.title}">${game.buttonText || 'Play Now'}</a>
       </div>
     </div>
   `;

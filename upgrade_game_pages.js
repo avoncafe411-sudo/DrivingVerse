@@ -14,12 +14,17 @@ for (const objText of objectTexts) {
   const categoryMatch = objText.match(/category:\s*'([^']*)'/);
   const descriptionMatch = objText.match(/description:\s*'([^']*)'/);
   const linkMatch = objText.match(/link:\s*'([^']*)'/);
-  const title = titleMatch[1];
+  const imageMatch = objText.match(/image:\s*'([^']*)'/);
+  const ratingMatch = objText.match(/rating:\s*'([^']*)'/);
+  let title = titleMatch[1];
+  title = title.replace(/\s*\|\s*DrivingVerse/gi, '').trim();
   gamesData.push({
     title,
     category: categoryMatch?.[1] || 'Driving',
     description: descriptionMatch?.[1] || '',
     link: linkMatch?.[1] || '',
+    image: imageMatch?.[1] || 'images/game-placeholder.svg',
+    rating: ratingMatch?.[1] || '4.5',
   });
 }
 
@@ -41,7 +46,7 @@ function buildTags(tagsString, category) {
   return tagsString.split(',').map((tag) => tag.trim()).filter(Boolean);
 }
 
-function buildGamePage({title, category, description, instructions, tags, iframeHtml, filename, canonical}) {
+function buildGamePage({title, category, description, instructions, tags, iframeHtml, filename, canonical, thumbnail, rating}) {
   const gameDescription = description || 'Play this driving game now in full-screen mode.';
   const instructionSection = instructions
     ? `<section class="section game-section" aria-labelledby="how-to-play-title">
@@ -53,6 +58,8 @@ function buildGamePage({title, category, description, instructions, tags, iframe
     ? escapeHtml(instructions)
     : 'Use keyboard arrows or WASD on desktop, and tap on-screen controls on mobile devices.';
   const tagItems = tags.map((tag) => `<span class="tag-item">${escapeHtml(tag)}</span>`).join('');
+  const displayRating = rating ? rating : '4.5';
+  const thumbnailSrc = thumbnail || 'images/game-placeholder.svg';
 
   return `<!doctype html>
 <html lang="en">
@@ -78,13 +85,14 @@ function buildGamePage({title, category, description, instructions, tags, iframe
     .badge-pill { display: inline-flex; align-items: center; gap: 0.4rem; background: #e2e8f0; color: #1f2937; border-radius: 999px; padding: 0.45rem 0.85rem; font-size: 0.92rem; }
     .page-grid { display: grid; grid-template-columns: 1.3fr 0.7fr; gap: 1.5rem; }
     .game-player { background: #ffffff; border-radius: 24px; box-shadow: 0 20px 60px rgba(15, 23, 42, 0.08); overflow: hidden; }
-    .game-frame { position: relative; width: 100%; min-height: 60vh; background: #000; }
-    .game-frame .notice { position: absolute; inset: 0 auto auto 0; width: 100%; padding: 0.85rem 1rem; background: rgba(0,0,0,0.7); color: #fff; z-index: 2; font-size: 0.95rem; }
-    .game-meta-grid { display: grid; gap: 0.75rem; padding: 1.5rem; }
-    .meta-card { background: #f8fafc; border-radius: 18px; padding: 1rem; }
-    .meta-card h3 { margin: 0 0 0.75rem; font-size: 1rem; color: #0f172a; }
-    .meta-card p { margin: 0; color: #334155; font-size: 0.95rem; line-height: 1.7; }
-    .tag-list { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.75rem; }
+    .game-frame { position: relative; width: 100%; background: #000; border-radius: 24px; overflow: hidden; }
+    .game-frame img { width: 100%; display: block; object-fit: cover; border-radius: 24px; min-height: 320px; }
+    .game-frame iframe { width: 100%; border: 0; border-radius: 24px; }
+    .play-button { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; width: 100%; max-width: 400px; margin: 1.5rem auto 0; padding: 1rem 1.25rem; font-size: 1rem; font-weight: 700; border-radius: 999px; border: 0; background: #2563eb; color: #fff; cursor: pointer; }
+    .game-frame__placeholder { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; background: #000; }
+    .game-frame__placeholder img { width: 100%; border-radius: 24px; object-fit: cover; }
+    .game-meta-line { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; margin-top: 1rem; }
+    .meta-pill { background: #e2e8f0; color: #0f172a; padding: 0.45rem 0.75rem; border-radius: 999px; font-size: 0.95rem; }
     .related-panel { display: grid; gap: 1rem; }
     .related-panel h2 { margin: 0 0 0.75rem; font-size: 1.25rem; }
     .related-list { display: grid; gap: 1rem; }
@@ -95,14 +103,20 @@ function buildGamePage({title, category, description, instructions, tags, iframe
     .section { background: #fff; border-radius: 24px; padding: 1.5rem; margin-top: 1.5rem; }
     .section h2 { margin-top: 0; font-size: 1.35rem; }
     .section p { margin: 0.75rem 0 0; color: #475569; line-height: 1.8; }
-    .game-meta-line { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; margin-top: 1rem; }
-    .meta-pill { background: #e2e8f0; color: #0f172a; padding: 0.45rem 0.75rem; border-radius: 999px; font-size: 0.95rem; }
     @media (max-width: 980px) {
       .page-grid { grid-template-columns: 1fr; }
+      .play-button { max-width: 100%; }
     }
     @media (max-width: 640px) {
       .page-shell { padding: 1rem; }
       .game-meta-grid { padding: 1rem; }
+      .game-frame iframe { height: 500px; }
+    }
+    @media (min-width: 641px) and (max-width: 980px) {
+      .game-frame iframe { height: 600px; }
+    }
+    @media (min-width: 981px) {
+      .game-frame iframe { height: 700px; }
     }
   </style>
 </head>
@@ -156,7 +170,10 @@ function buildGamePage({title, category, description, instructions, tags, iframe
     <div class="page-grid">
       <article class="game-player">
         <div class="game-frame">
-          ${iframeHtml}
+          <div class="game-frame__placeholder" id="gamePlayerPlaceholder">
+            <img src="${escapeHtml(thumbnailSrc)}" alt="${escapeHtml(title)} thumbnail" />
+            <button class="play-button" id="playGameButton" type="button">▶ PLAY GAME</button>
+          </div>
         </div>
         <section class="section game-section" aria-labelledby="description-title">
           <h2 id="description-title">About this game</h2>
@@ -201,6 +218,15 @@ function buildGamePage({title, category, description, instructions, tags, iframe
   <script src="../js/script.js"></script>
   <script>
     window.addEventListener('DOMContentLoaded', () => {
+      const playButton = document.getElementById('playGameButton');
+      const placeholder = document.getElementById('gamePlayerPlaceholder');
+      const iframeHtml = ${JSON.stringify(iframeHtml)};
+      if (playButton && placeholder) {
+        playButton.addEventListener('click', () => {
+          placeholder.innerHTML = iframeHtml;
+        });
+      }
+
       const currentPage = '${escapeHtml(title)}';
       const currentLink = 'games/${canonical}';
       const container = document.getElementById('relatedGames');
@@ -209,8 +235,10 @@ function buildGamePage({title, category, description, instructions, tags, iframe
       const shuffled = allGames.sort(() => Math.random() - 0.5).slice(0, 4);
       container.innerHTML = shuffled.map((game) =>
         '<a class="related-card" href="../' + game.link + '" aria-label="Play ' + escapeHtml(game.title) + '">' +
+        '<img src="' + (game.image || 'images/game-placeholder.svg') + '" alt="' + escapeHtml(game.title) + ' thumbnail" loading="lazy" />' +
         '<h3>' + escapeHtml(game.title) + '</h3>' +
-        '<p>' + escapeHtml(game.description || 'Play this exciting driving game now.') + '</p>' +
+        '<span class="badge-pill">' + escapeHtml(game.category) + '</span>' +
+        '<div class="related-card__action">' + (game.buttonText || 'Play Now') + '</div>' +
         '</a>'
       ).join('');
     });
@@ -228,15 +256,17 @@ for (const filename of htmlFiles) {
   const filePath = path.join(gamesDir, filename);
   const content = fs.readFileSync(filePath, 'utf8');
   const titleMatch = content.match(/<title>([^<]+)<\/title>/i);
-  const title = titleMatch ? titleMatch[1].trim() : filename.replace(/\.html$/, '').split('-').map((w) => w[0].toUpperCase() + w.slice(1)).join(' ');
+  const extractedTitle = titleMatch ? titleMatch[1].trim() : '';
+  const inferredTitle = filename.replace(/\.html$/, '').split('-').map((w) => w[0].toUpperCase() + w.slice(1)).join(' ');
+  const scriptMeta = gamesData.find((game) => game.title === extractedTitle || game.link.endsWith(filename));
+  const metadata = feedMap.get(scriptMeta?.title || extractedTitle || inferredTitle);
+  const title = scriptMeta?.title || metadata?.title || extractedTitle || inferredTitle;
   const iframeMatch = content.match(/<iframe[\s\S]*?<\/iframe>/i);
   if (!iframeMatch) {
     skippedFiles.push(filename);
     continue;
   }
   const iframeHtml = iframeMatch[0];
-  const metadata = feedMap.get(title);
-  const scriptMeta = gamesData.find((game) => game.title === title || game.link.endsWith(filename));
   const category = metadata?.category || scriptMeta?.category || 'Driving';
   const description = metadata?.description || scriptMeta?.description || 'Play this driving game now in full-screen mode.';
   const instructions = metadata?.instructions || '';
@@ -250,6 +280,8 @@ for (const filename of htmlFiles) {
     iframeHtml,
     filename,
     canonical: filename,
+    thumbnail: scriptMeta?.image || metadata?.thumb || 'images/game-placeholder.svg',
+    rating: scriptMeta?.rating || '4.5',
   });
   fs.writeFileSync(filePath, newContent, 'utf8');
   updatedFiles.push(filename);
