@@ -24,7 +24,7 @@ window.games = [
 
     detailUrl: "games/extreme-car-driving-simulator.html",
 
-    gameUrl: "https://html5.gamemonetize.co/wtmr1ws4khywnki9fm53csa0txss21tb/",
+    url: "https://html5.gamemonetize.co/wtmr1ws4khywnki9fm53csa0txss21tb/",
 
     width: "1334",
     height: "750",
