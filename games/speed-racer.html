@@ -1,230 +1,167 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Play Speed Racer online for free on DrivingVerse. Drive at high speed, avoid obstacles and enjoy this open-source browser racing game."
-    />
-    <meta name="robots" content="index,follow" />
-    <link rel="canonical" href="https://avoncafe411-sudo.github.io/DrivingVerse/games/speed-racer.html" />
-    <meta property="og:title" content="Speed Racer - Play Free Online | DrivingVerse" />
-    <meta
-      property="og:description"
-      content="Play Speed Racer online for free on DrivingVerse. Drive at high speed, avoid obstacles and enjoy this open-source browser racing game."
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://avoncafe411-sudo.github.io/DrivingVerse/games/speed-racer.html" />
-    <meta property="og:image" content="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1200&q=80" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Speed Racer - Play Free Online | DrivingVerse" />
-    <meta
-      name="twitter:description"
-      content="Play Speed Racer online for free on DrivingVerse. Drive at high speed, avoid obstacles and enjoy this open-source browser racing game."
-    />
-    <meta name="twitter:image" content="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1200&q=80" />
-    <title>Speed Racer - Play Free Online | DrivingVerse</title>
-    <link rel="stylesheet" href="../css/style.css" />
-    <style>
-      .page-shell {
-        width: min(1120px, calc(100% - 2rem));
-        margin: 0 auto;
-        padding: 2rem 0 3rem;
-      }
-      .game-header {
-        padding: 2.2rem 0 1rem;
-      }
-      .game-header h1 {
-        margin: 0 0 0.35rem;
-        font-size: clamp(2rem, 3vw, 2.7rem);
-      }
-      .game-header p {
-        margin: 0;
-        color: var(--muted);
-      }
-      .game-container {
-        background: var(--surface);
-        border: 1px solid var(--border);
-        border-radius: var(--radius-lg);
-        box-shadow: var(--shadow);
-        overflow: hidden;
-      }
-      .breadcrumb {
-        padding: 1rem 1.25rem;
-        border-bottom: 1px solid var(--border);
-        color: var(--muted);
-        font-size: 0.95rem;
-      }
-      .breadcrumb a {
-        color: var(--accent);
-      }
-      .game-info {
-        padding: 1.25rem 1.25rem 0;
-      }
-      .game-info h2 {
-        margin: 0 0 0.4rem;
-        font-size: 1.3rem;
-      }
-      .rating {
-        margin: 0 0 0.75rem;
-      }
-      .short-description {
-        margin: 0 0 1rem;
-        color: var(--muted);
-      }
-      .game-frame {
-        padding: 0 1.25rem 1.25rem;
-      }
-      .game-frame iframe {
-        border-radius: var(--radius-md);
-        border: 0;
-        background: #000;
-        width: 100%;
-        height: 700px;
-      }
-      .content-section {
-        padding: 1.25rem;
-        border-top: 1px solid var(--border);
-      }
-      .content-section h2,
-      .content-section h3 {
-        margin-top: 0;
-      }
-      .info-grid {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 0.9rem;
-        margin-top: 0.8rem;
-      }
-      .info-card {
-        background: var(--surface-strong);
-        border: 1px solid var(--border);
-        border-radius: var(--radius-md);
-        padding: 0.9rem 1rem;
-      }
-      .info-card strong {
-        display: block;
-        margin-bottom: 0.25rem;
-      }
-      .content-section ul {
-        margin: 0;
-        padding-left: 1.25rem;
-        color: var(--muted);
-      }
-      .content-section ul li {
-        margin-bottom: 0.65rem;
-      }
-      .content-section p {
-        color: var(--muted);
-      }
-      .back-home {
-        display: inline-flex;
-        margin-top: 1.5rem;
-      }
-      @media (max-width: 760px) {
-        .info-grid {
-          grid-template-columns: 1fr;
-        }
-      }
-    </style>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CTTBK93PV8"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Play Speed Racer online for free. Drive fast, avoid obstacles and survive as long as possible." />
+  <title>Speed Racer - Play Free Online | DrivingVerse | DrivingVerse</title>
+  <link rel="icon" type="image/svg+xml" href="../icons/favicon.svg" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="canonical" href="https://avoncafe411-sudo.github.io/DrivingVerse/games/speed-racer.html" />
+  <style>
+    :root { box-sizing: border-box; }
+    *, *::before, *::after { box-sizing: inherit; }
+    body { margin: 0; background: #f8f8fb; color: #111; font-family: Poppins, system-ui, sans-serif; }
+    .page-shell { max-width: 1280px; margin: 0 auto; padding: 1rem 1rem 3rem; }
+    .breadcrumb { display: flex; flex-wrap: wrap; gap: 0.5rem; font-size: 0.92rem; color: #4a5568; margin-bottom: 1rem; }
+    .breadcrumb a { color: #2563eb; text-decoration: none; }
+    .breadcrumb span.separator { color: #94a3b8; }
+    .game-hero { display: grid; gap: 1rem; margin-bottom: 1.5rem; }
+    .game-title { margin: 0; font-size: clamp(2rem, 3vw, 3rem); line-height: 1.05; }
+    .game-badges { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.75rem; }
+    .badge-pill { display: inline-flex; align-items: center; gap: 0.4rem; background: #e2e8f0; color: #1f2937; border-radius: 999px; padding: 0.45rem 0.85rem; font-size: 0.92rem; }
+    .page-grid { display: grid; grid-template-columns: 1.3fr 0.7fr; gap: 1.5rem; }
+    .game-player { background: #ffffff; border-radius: 24px; box-shadow: 0 20px 60px rgba(15, 23, 42, 0.08); overflow: hidden; }
+    .game-frame { position: relative; width: 100%; min-height: 60vh; background: #000; }
+    .game-frame .notice { position: absolute; inset: 0 auto auto 0; width: 100%; padding: 0.85rem 1rem; background: rgba(0,0,0,0.7); color: #fff; z-index: 2; font-size: 0.95rem; }
+    .game-meta-grid { display: grid; gap: 0.75rem; padding: 1.5rem; }
+    .meta-card { background: #f8fafc; border-radius: 18px; padding: 1rem; }
+    .meta-card h3 { margin: 0 0 0.75rem; font-size: 1rem; color: #0f172a; }
+    .meta-card p { margin: 0; color: #334155; font-size: 0.95rem; line-height: 1.7; }
+    .tag-list { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.75rem; }
+    .related-panel { display: grid; gap: 1rem; }
+    .related-panel h2 { margin: 0 0 0.75rem; font-size: 1.25rem; }
+    .related-list { display: grid; gap: 1rem; }
+    .related-card { display: block; padding: 1rem; border-radius: 20px; background: #fff; text-decoration: none; border: 1px solid #e2e8f0; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+    .related-card:hover { transform: translateY(-2px); box-shadow: 0 12px 35px rgba(15, 23, 42, 0.1); }
+    .related-card h3 { margin: 0 0 0.5rem; font-size: 1rem; color: #111827; }
+    .related-card p { margin: 0; color: #475569; font-size: 0.95rem; line-height: 1.6; }
+    .section { background: #fff; border-radius: 24px; padding: 1.5rem; margin-top: 1.5rem; }
+    .section h2 { margin-top: 0; font-size: 1.35rem; }
+    .section p { margin: 0.75rem 0 0; color: #475569; line-height: 1.8; }
+    .game-meta-line { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; margin-top: 1rem; }
+    .meta-pill { background: #e2e8f0; color: #0f172a; padding: 0.45rem 0.75rem; border-radius: 999px; font-size: 0.95rem; }
+    @media (max-width: 980px) {
+      .page-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .page-shell { padding: 1rem; }
+      .game-meta-grid { padding: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <button class="scroll-top" id="scrollTop" type="button" aria-label="Scroll to top">↑</button>
 
-      gtag('config', 'G-CTTBK93PV8');
-    </script>
-  </head>
-  <body>
-    <div class="page-shell">
-      <header class="game-header">
-        <h1>Speed Racer</h1>
-        <p>Play for free on DrivingVerse</p>
-      </header>
+  <header class="site-header">
+    <div class="container nav-shell">
+      <a class="brand" href="../index.html" aria-label="DrivingVerse home">
+        <span class="brand-mark">D</span>
+        <span>DrivingVerse</span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="siteNavigation">
+        <span></span><span></span><span></span>
+      </button>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle color theme">
+        <span aria-hidden="true">☀</span>
+      </button>
+      <nav class="site-nav" id="siteNavigation" aria-label="Primary navigation">
+        <a class="active" href="../index.html">Home</a>
+        <a href="../index.html#featured">Featured</a>
+        <a href="../index.html#categories">Categories</a>
+        <a href="../pages/about.html">About</a>
+        <a href="../pages/contact.html">Contact</a>
+      </nav>
+      <form class="search-bar" role="search">
+        <label class="sr-only" for="siteSearch">Search driving games</label>
+        <input id="siteSearch" type="search" placeholder="Search games" autocomplete="off" />
+      </form>
+    </div>
+  </header>
 
-      <main>
-        <section class="game-container" aria-labelledby="game-title">
-          <div class="breadcrumb" aria-label="Breadcrumb">
-            <a href="../index.html">Home</a> &gt;
-            <span>Racing Games</span> &gt;
-            <span>Speed Racer</span>
-          </div>
+  <main id="main-content" class="page-shell">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="../index.html">Home</a>
+      <span class="separator">›</span>
+      <a href="../index.html#categories">Racing</a>
+      <span class="separator">›</span>
+      <span aria-current="page">Speed Racer - Play Free Online | DrivingVerse</span>
+    </nav>
 
-          <div class="game-info">
-            <h2 id="game-title">Speed Racer</h2>
-            <p class="rating">⭐⭐⭐⭐⭐ 4.7 / 5</p>
-            <p class="short-description">
-              Speed Racer is an open-source browser racing game where players drive at high speed while avoiding obstacles and aiming for the highest score.
-            </p>
-          </div>
+    <section class="game-hero">
+      <h1 class="game-title">Speed Racer - Play Free Online | DrivingVerse</h1>
+      <div class="game-badges">
+        <span class="badge-pill">Racing</span>
+        <span class="tag-item">Racing</span>
+      </div>
+    </section>
 
-          <div class="game-frame">
-            <iframe
+    <div class="page-grid">
+      <article class="game-player">
+        <div class="game-frame">
+          <iframe
               src="speed-racer/index.html"
               allowfullscreen
               title="Speed Racer gameplay"
             ></iframe>
-          </div>
-
-          <section class="content-section" aria-labelledby="how-to-play-title">
-            <h2 id="how-to-play-title">How to Play</h2>
-            <p>
-              Accelerate through the course and avoid obstacles while keeping your speed under control. Use quick reflexes to weave past barriers, collect points, and survive as long as possible.
-            </p>
-          </section>
-
-          <section class="content-section" aria-labelledby="controls-title">
-            <h2 id="controls-title">Controls</h2>
-            <div class="info-grid">
-              <div class="info-card">
-                <strong>Arrow Keys</strong>
-                <span>Steer the vehicle and adjust speed.</span>
-              </div>
-              <div class="info-card">
-                <strong>Space</strong>
-                <span>Use boost or brake depending on game mode.</span>
-              </div>
-            </div>
-          </section>
-
-          <section class="content-section" aria-labelledby="features-title">
-            <h2 id="features-title">Features</h2>
-            <ul>
-              <li>Fast-paced open-source racing action.</li>
-              <li>Responsive browser controls for desktop and mobile.</li>
-              <li>Obstacle avoidance and score-based gameplay.</li>
-              <li>Instant play with no downloads required.</li>
-            </ul>
-          </section>
-
-          <section class="content-section" aria-labelledby="credits-title">
-            <h2 id="credits-title">Credits</h2>
-            <p>
-              Original Game Developer:<br />
-              <strong>Steve-IX</strong>
-            </p>
-            
-            <p>
-              Original Repository:<br />
-              <a href="https://github.com/Steve-IX/Speed_Racer_Game" target="_blank" rel="noopener noreferrer">
-                https://github.com/Steve-IX/Speed_Racer_Game
-              </a>
-            </p>
-            <p>
-              License:<br />
-              <strong>MIT License</strong>
-            </p>
-            <p>
-              This game is hosted by DrivingVerse in accordance with the MIT License. Copyright remains with the original developer.
-            </p>
-          </section>
-
-          <a class="btn btn-primary back-home" href="../index.html">Back to Home</a>
+        </div>
+        <section class="section game-section" aria-labelledby="description-title">
+          <h2 id="description-title">About this game</h2>
+          <p>Play Speed Racer online for free. Drive fast, avoid obstacles and survive as long as possible.</p>
         </section>
-      </main>
+        
+        <section class="section game-section" aria-labelledby="controls-title">
+          <h2 id="controls-title">Controls</h2>
+          <p>Use keyboard arrows or WASD on desktop, and tap on-screen controls on mobile devices.</p>
+        </section>
+      </article>
+
+      <aside class="related-panel">
+        <section class="section" aria-labelledby="related-title">
+          <h2 id="related-title">Related Games</h2>
+          <div class="related-list" id="relatedGames"></div>
+        </section>
+      </aside>
     </div>
-  </body>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-shell">
+      <div>
+        <a class="brand brand-footer" href="../index.html">
+          <span class="brand-mark">D</span>
+          <span>DrivingVerse</span>
+        </a>
+        <p>Premium browser driving games with a smooth, modern feel.</p>
+      </div>
+      <div class="footer-links">
+        <a href="../pages/about.html">About</a>
+        <a href="../pages/contact.html">Contact</a>
+        <a href="../pages/privacy.html">Privacy</a>
+        <a href="../pages/terms.html">Terms</a>
+        <a href="../pages/dmca.html">DMCA</a>
+        <a href="../pages/disclaimer.html">Disclaimer</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/script.js"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const currentPage = 'Speed Racer - Play Free Online | DrivingVerse';
+      const currentLink = 'games/speed-racer.html';
+      const container = document.getElementById('relatedGames');
+      const allGames = Array.isArray(window.games) ? window.games.filter((game) => game.link && game.link !== currentLink) : [];
+      if (!container || allGames.length === 0) return;
+      const shuffled = allGames.sort(() => Math.random() - 0.5).slice(0, 4);
+      container.innerHTML = shuffled.map((game) =>
+        '<a class="related-card" href="../' + game.link + '" aria-label="Play ' + escapeHtml(game.title) + '">' +
+        '<h3>' + escapeHtml(game.title) + '</h3>' +
+        '<p>' + escapeHtml(game.description || 'Play this exciting driving game now.') + '</p>' +
+        '</a>'
+      ).join('');
+    });
+  </script>
+</body>
 </html>
