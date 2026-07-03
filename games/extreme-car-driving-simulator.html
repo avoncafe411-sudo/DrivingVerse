@@ -74,8 +74,10 @@ src="https://img.gamemonetize.com/wtmr1ws4khywnki9fm53csa0txss21tb/512x384.jpg">
 
 <h1>Extreme Car Driving Simulator</h1>
 
-<a class="play-btn"
-href="../player.html?game=extreme-car-driving-simulator">
+<a
+class="play-btn"
+href="#"
+id="playGameButton">
 PLAY GAME
 </a>
 
@@ -97,5 +99,23 @@ Mouse click or tap to play.
 
 </div>
 
+<script>
+document.getElementById("playGameButton").addEventListener("click", function(e){
+
+e.preventDefault();
+
+document.querySelector(".game-frame").innerHTML = `
+<iframe
+src="https://html5.gamemonetize.co/wtmr1ws4khywnki9fm53csa0txss21tb/"
+width="100%"
+height="700"
+frameborder="0"
+allowfullscreen
+scrolling="no">
+</iframe>
+`;
+
+});
+</script>
 </body>
 </html>
