@@ -68,6 +68,6 @@ window.games = [
     instructions: "Keyboard Arrows - Up, Down, Left, Right. Space Bar for Handbrake.",
 
     tags: "3D, Cars, Racing"
-},
+}
 ];
 
