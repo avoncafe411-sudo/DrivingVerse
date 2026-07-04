@@ -69,5 +69,6 @@ window.games = [
 
     tags: "3D, Cars, Racing"
 }
+
 ];
 
