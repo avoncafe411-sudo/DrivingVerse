@@ -10,55 +10,71 @@
 
 <style>
 body{
-font-family:Poppins,sans-serif;
-margin:0;
-background:#111827;
-color:#fff;
+    font-family:Poppins,sans-serif;
+    margin:0;
+    background:#111827;
+    color:#fff;
 }
 
 .container{
-max-width:1200px;
-margin:auto;
-padding:30px;
+    max-width:1200px;
+    margin:auto;
+    padding:30px;
+}
+
+#gameContainer{
+    width:100%;
 }
 
 .game-image{
-width:100%;
-max-width:700px;
-display:block;
-margin:auto;
-border-radius:15px;
+    width:100%;
+    max-width:900px;
+    display:block;
+    margin:auto;
+    border-radius:15px;
 }
 
-h1{
-text-align:center;
-margin-top:25px;
+.game-title{
+    text-align:center;
+    margin:25px 0;
 }
 
 .play-btn{
-display:block;
-width:250px;
-margin:30px auto;
-padding:18px;
-background:#ff4d00;
-color:#fff;
-text-align:center;
-font-size:22px;
-font-weight:bold;
-text-decoration:none;
-border-radius:12px;
+    display:block;
+    width:260px;
+    margin:25px auto;
+    padding:18px;
+    background:#ff4d00;
+    color:#fff;
+    text-align:center;
+    font-size:22px;
+    font-weight:bold;
+    text-decoration:none;
+    border-radius:12px;
 }
 
 .play-btn:hover{
-background:#ff6a00;
+    background:#ff6a00;
+}
+
+.game-player{
+    width:100%;
+    aspect-ratio:16/9;
+}
+
+.game-player iframe{
+    width:100%;
+    height:100%;
+    border:none;
+    border-radius:15px;
 }
 
 .info{
-margin-top:40px;
-background:#1f2937;
-padding:25px;
-border-radius:15px;
-line-height:1.8;
+    margin-top:40px;
+    background:#1f2937;
+    padding:25px;
+    border-radius:15px;
+    line-height:1.8;
 }
 </style>
 
@@ -68,18 +84,25 @@ line-height:1.8;
 
 <div class="container">
 
+<div id="gameContainer">
+
 <img
 class="game-image"
-src="https://img.gamemonetize.com/wtmr1ws4khywnki9fm53csa0txss21tb/512x384.jpg">
+src="https://img.gamemonetize.com/wtmr1ws4khywnki9fm53csa0txss21tb/512x384.jpg"
+alt="Extreme Car Driving Simulator">
 
-<h1>Extreme Car Driving Simulator</h1>
+<h1 class="game-title">
+Extreme Car Driving Simulator
+</h1>
 
 <a
-class="play-btn"
 href="#"
+class="play-btn"
 id="playGameButton">
 PLAY GAME
 </a>
+
+</div>
 
 <div class="info">
 
@@ -100,22 +123,30 @@ Mouse click or tap to play.
 </div>
 
 <script>
-document.getElementById("playGameButton").addEventListener("click", function(e){
+
+const playButton=document.getElementById("playGameButton");
+
+playButton.addEventListener("click",function(e){
 
 e.preventDefault();
 
-document.querySelector(".game-frame").innerHTML = `
+document.getElementById("gameContainer").innerHTML=`
+
+<div class="game-player">
+
 <iframe
 src="https://html5.gamemonetize.co/wtmr1ws4khywnki9fm53csa0txss21tb/"
-width="100%"
-height="700"
-frameborder="0"
 allowfullscreen
 scrolling="no">
 </iframe>
+
+</div>
+
 `;
 
 });
+
 </script>
+
 </body>
 </html>
