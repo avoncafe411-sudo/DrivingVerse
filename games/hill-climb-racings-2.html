@@ -96,9 +96,11 @@ HIll climb Racings 2
 </h1>
 
 <a
-href="#"
+href="https://www.hillclimbracing2.com/"
 class="play-btn"
-id="playGameButton">
+id="playGameButton"
+target="_blank"
+rel="noopener noreferrer">
 PLAY GAME
 </a>
 
@@ -118,6 +120,10 @@ Hill Climb Racings 2 is back, bigger, better and even more fun. Race across chal
 Mouse click or tap to play.
 </p>
 
+<p>
+The embedded game host can be unavailable at times, so the button above opens the official game page directly.
+</p>
+
 </div>
 
 </div>
@@ -129,21 +135,7 @@ const playButton=document.getElementById("playGameButton");
 playButton.addEventListener("click",function(e){
 
 e.preventDefault();
-
-document.getElementById("gameContainer").innerHTML=`
-
-<div class="game-player">
-
-<iframe
-src="https://html5.gamemonetize.co/1vxk8rfmkpin0l0ex7atiuftp6l3mu6p/"
-allowfullscreen
-scrolling="no">
-</iframe>
-
-</div>
-
-`;
-
+	window.open(playButton.href, "_blank", "noopener,noreferrer");
 });
 
 </script>
