@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>Offroad Truck Driving Simulator | DrivingVerse</title>
+
+<link rel="stylesheet" href="../css/style.css">
+
+<style>
+body{
+    font-family:Poppins,sans-serif;
+    margin:0;
+    background:#111827;
+    color:#fff;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:30px;
+}
+
+#gameContainer{
+    width:100%;
+}
+
+.game-image{
+    width:100%;
+    max-width:900px;
+    display:block;
+    margin:auto;
+    border-radius:15px;
+}
+
+.game-title{
+    text-align:center;
+    margin:25px 0;
+}
+
+.play-btn{
+    display:block;
+    width:260px;
+    margin:25px auto;
+    padding:18px;
+    background:#ff4d00;
+    color:#fff;
+    text-align:center;
+    font-size:22px;
+    font-weight:bold;
+    text-decoration:none;
+    border-radius:12px;
+}
+
+.play-btn:hover{
+    background:#ff6a00;
+}
+
+.game-player{
+    width:100%;
+    aspect-ratio:16/9;
+}
+
+.game-player iframe{
+    width:100%;
+    height:100%;
+    border:none;
+    border-radius:15px;
+}
+
+.info{
+    margin-top:40px;
+    background:#1f2937;
+    padding:25px;
+    border-radius:15px;
+    line-height:1.8;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div id="gameContainer">
+
+<img
+class="game-image"
+src="https://img.gamemonetize.com/bwrunfiqbjfxprp91bq5v0xhtqzmukno/512x384.jpg"
+alt="Offroad Truck Driving Simulator">
+
+<h1 class="game-title">
+Offroad Truck Driving Simulator
+</h1>
+
+<a
+href="#"
+class="play-btn"
+id="playGameButton">
+PLAY GAME
+</a>
+
+</div>
+
+<div class="info">
+
+<h2>Description</h2>
+
+<p>
+Offroad Truck Driving Simulator is the ultimate mud truck driving experience. Drive powerful 4x4 trucks across mountains, dirt roads, rivers, and rough terrain. Upgrade your vehicles, conquer difficult obstacles, complete missions, and become the king of off-road trucking.
+</p>
+
+<h2>Controls</h2>
+
+<p>
+W A S D or Arrow Keys - Move Truck<br>
+H - Horn<br>
+R - Reverse
+</p>
+
+</div>
+
+</div>
+
+<script>
+
+const playButton=document.getElementById("playGameButton");
+
+playButton.addEventListener("click",function(e){
+
+e.preventDefault();
+
+document.getElementById("gameContainer").innerHTML=`
+
+<div class="game-player">
+
+<iframe
+src="https://html5.gamemonetize.co/bwrunfiqbjfxprp91bq5v0xhtqzmukno/"
+allowfullscreen
+scrolling="no">
+</iframe>
+
+</div>
+
+`;
+
+});
+
+</script>
+
+</body>
+</html>
