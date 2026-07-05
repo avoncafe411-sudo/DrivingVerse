@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>GT Truck Racer | DrivingVerse</title>
+
+<link rel="stylesheet" href="../css/style.css">
+
+<style>
+body{
+    font-family:Poppins,sans-serif;
+    margin:0;
+    background:#111827;
+    color:#fff;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:30px;
+}
+
+#gameContainer{
+    width:100%;
+}
+
+.game-image{
+    width:100%;
+    max-width:900px;
+    display:block;
+    margin:auto;
+    border-radius:15px;
+}
+
+.game-title{
+    text-align:center;
+    margin:25px 0;
+}
+
+.play-btn{
+    display:block;
+    width:260px;
+    margin:25px auto;
+    padding:18px;
+    background:#ff4d00;
+    color:#fff;
+    text-align:center;
+    font-size:22px;
+    font-weight:bold;
+    text-decoration:none;
+    border-radius:12px;
+}
+
+.play-btn:hover{
+    background:#ff6a00;
+}
+
+.game-player{
+    width:100%;
+    aspect-ratio:16/9;
+}
+
+.game-player iframe{
+    width:100%;
+    height:100%;
+    border:none;
+    border-radius:15px;
+}
+
+.info{
+    margin-top:40px;
+    background:#1f2937;
+    padding:25px;
+    border-radius:15px;
+    line-height:1.8;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div id="gameContainer">
+
+<img
+class="game-image"
+src="https://img.gamemonetize.com/ypdftekz1flkogkne2r1ej9hn8oxl3ml/512x384.jpg"
+alt="GT Truck Racer">
+
+<h1 class="game-title">
+GT Truck Racer
+</h1>
+
+<a
+href="#"
+class="play-btn"
+id="playGameButton">
+PLAY GAME
+</a>
+
+</div>
+
+<div class="info">
+
+<h2>Description</h2>
+
+<p>
+GT Truck Racer is an exciting truck driving game where you experience realistic driving across different cities and weather conditions. Drive powerful trucks, avoid obstacles, complete missions, and become the ultimate truck racer.
+</p>
+
+<h2>Controls</h2>
+
+<p>
+Use the on-screen controls to steer your truck, switch camera views, and activate the speed booster for faster driving.
+</p>
+
+</div>
+
+</div>
+
+<script>
+
+const playButton=document.getElementById("playGameButton");
+
+playButton.addEventListener("click",function(e){
+
+e.preventDefault();
+
+document.getElementById("gameContainer").innerHTML=`
+
+<div class="game-player">
+
+<iframe
+src="https://html5.gamemonetize.co/ypdftekz1flkogkne2r1ej9hn8oxl3ml/"
+allowfullscreen
+scrolling="no">
+</iframe>
+
+</div>
+
+`;
+
+});
+
+</script>
+
+</body>
+</html>

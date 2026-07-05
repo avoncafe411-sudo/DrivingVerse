@@ -108,6 +108,41 @@ window.games = [
     instructions:"Keyboard Controls",
 
     tags:"Car"
+},
+
+{
+    id: "78244",
+    slug: "gt-truck-racer",
+
+    title: "GT Truck Racer",
+
+    category: "Racing",
+
+    rating: "4.8",
+
+    description: "GT Truck Racer is an exciting truck driving game where you experience realistic driving across different cities and weather conditions.",
+
+    image: "https://img.gamemonetize.com/ypdftekz1flkogkne2r1ej9hn8oxl3ml/512x384.jpg",
+
+    featured: true,
+    trending: true,
+    recent: true,
+    popular: true,
+
+    buttonText: "Play Now",
+
+    link: "games/gt-truck-racer.html",
+
+    detailUrl: "games/gt-truck-racer.html",
+
+    url: "https://html5.gamemonetize.co/ypdftekz1flkogkne2r1ej9hn8oxl3ml/",
+
+    width: "800",
+    height: "600",
+
+    instructions: "Use intuitive on-screen controls to drive your vehicle smoothly. Tap left and right buttons to steer, switch camera views, and activate the booster button for an instant speed boost.",
+
+    tags: "Truck"
 }
 ];
 
