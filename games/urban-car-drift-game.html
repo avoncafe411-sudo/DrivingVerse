@@ -26,10 +26,6 @@ margin:auto;
 padding:30px;
 }
 
-#gameContainer{
-width:100%;
-}
-
 .game-image{
 width:100%;
 max-width:900px;
@@ -61,18 +57,6 @@ border-radius:12px;
 background:#ff6a00;
 }
 
-.game-player{
-width:100%;
-aspect-ratio:16/9;
-}
-
-.game-player iframe{
-width:100%;
-height:100%;
-border:none;
-border-radius:15px;
-}
-
 .info{
 margin-top:40px;
 background:#1f2937;
@@ -89,8 +73,6 @@ line-height:1.8;
 
 <div class="container">
 
-<div id="gameContainer">
-
 <img
 class="game-image"
 src="https://img.gamemonetize.com/98j7rm64rxbynvdvqz86sgf68359a15g/512x384.jpg"
@@ -101,59 +83,34 @@ Urban Car Drift Game
 </h1>
 
 <a
-href="#"
 class="play-btn"
-id="playGameButton">
+href="https://html5.gamemonetize.co/98j7rm64rxbynvdvqz86sgf68359a15g/"
+target="_blank"
+rel="noopener noreferrer">
 PLAY GAME
 </a>
-
-</div>
 
 <div class="info">
 
 <h2>Description</h2>
 
 <p>
-Welcome to the world of Urban Car Drift Game. Get ready to ignite your engines, drift through the city, master precision driving, perform freestyle drifts, and enjoy an exciting open-world driving experience.
+Welcome to the world of Urban Car Drift Game. Get ready to ignite your engines, push the pedal to the metal, and drift like a pro in the most thrilling Urban Rush Car Game ever. This is not just a driving simulator game, it's an adrenaline-pumping experience for every car enthusiast.
 </p>
 
 <h2>Controls</h2>
 
 <p>
-W / ↑ = Forward<br>
-S / ↓ = Reverse<br>
-A / ← = Left<br>
-D / → = Right<br>
+W / ↑ = Move Forward<br>
+S / ↓ = Move Back<br>
+A / ← = Turn Left<br>
+D / → = Turn Right<br>
 Mouse = Click Buttons
 </p>
 
 </div>
 
 </div>
-
-<script>
-
-document.getElementById("playGameButton").addEventListener("click",function(e){
-
-e.preventDefault();
-
-document.getElementById("gameContainer").innerHTML=`
-
-<div class="game-player">
-
-<iframe
-src="https://html5.gamemonetize.co/98j7rm64rxbynvdvqz86sgf68359a15g/"
-allowfullscreen
-scrolling="no">
-</iframe>
-
-</div>
-
-`;
-
-});
-
-</script>
 
 </body>
 </html>
