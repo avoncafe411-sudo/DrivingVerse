@@ -71,43 +71,43 @@ window.games = [
 },
 
 {
-id:"78737",
+    id:"78737",
 
-slug:"urban-car-drift-game",
+    slug:"urban-car-drift-game",
 
-title:"Urban Car Drift Game",
+    title:"Urban Car Drift Game",
 
-category:"Racing",
+    category:"Racing",
 
-rating:"4.8",
+    rating:"4.8",
 
-description:"Welcome to the world of Urban Car Drift Game. Get ready to ignite your engines, push the pedal to the metal and drift like a pro.",
+    description:"Welcome to the world of Urban Car Drift Game. Get ready to ignite your engines, push the pedal to the metal and drift like a pro.",
 
-image:"https://img.gamemonetize.com/98j7rm64rxbynvdvqz86sgf68359a15g/512x384.jpg",
+    image:"https://img.gamemonetize.com/98j7rm64rxbynvdvqz86sgf68359a15g/512x384.jpg",
 
-featured:true,
+    featured:true,
 
-trending:true,
+    trending:true,
 
-recent:true,
+    recent:true,
 
-popular:true,
+    popular:true,
 
-buttonText:"Play Now",
+    buttonText:"Play Now",
 
-link:"games/urban-car-drift-game.html",
+    link:"games/urban-car-drift-game.html",
 
-detailUrl:"games/urban-car-drift-game.html",
+    detailUrl:"games/urban-car-drift-game.html",
 
-url:"https://html5.gamemonetize.co/98j7rm64rxbynvdvqz86sgf68359a15g/",
+    url:"https://html5.gamemonetize.co/98j7rm64rxbynvdvqz86sgf68359a15g/",
 
-width:"800",
+    width:"800",
 
-height:"600",
+    height:"600",
 
-instructions:"Keyboard Controls",
+    instructions:"Keyboard Controls",
 
-tags:"Car"
+    tags:"Car"
 }
 ];
 
