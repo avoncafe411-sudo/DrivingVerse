@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>Drive Pro 3D | Free Online Driving Game</title>
+
+<meta name="description" content="Play Drive Pro 3D online for free. Dodge traffic, unlock new vehicles, complete challenging levels, and enjoy smooth one-touch driving action directly in your browser.">
+
+<link rel="stylesheet" href="../css/style.css">
+
+<style>
+
+body{
+font-family:Poppins,sans-serif;
+margin:0;
+background:#111827;
+color:#fff;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+padding:30px;
+}
+
+#gameContainer{
+width:100%;
+}
+
+.game-image{
+width:100%;
+max-width:900px;
+display:block;
+margin:auto;
+border-radius:15px;
+}
+
+.game-title{
+text-align:center;
+margin:25px 0;
+}
+
+.play-btn{
+display:block;
+width:260px;
+margin:25px auto;
+padding:18px;
+background:#ff4d00;
+color:#fff;
+text-align:center;
+font-size:22px;
+font-weight:bold;
+text-decoration:none;
+border-radius:12px;
+}
+
+.play-btn:hover{
+background:#ff6a00;
+}
+
+.game-player{
+width:100%;
+aspect-ratio:16/9;
+}
+
+.game-player iframe{
+width:100%;
+height:100%;
+border:none;
+border-radius:15px;
+}
+
+.info{
+margin-top:40px;
+background:#1f2937;
+padding:25px;
+border-radius:15px;
+line-height:1.8;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div id="gameContainer">
+
+<img
+class="game-image"
+src="https://img.gamemonetize.com/jqwz9v6dty5x1y6ug4cpb7xyjoimawu8/512x384.jpg"
+alt="Drive Pro 3D">
+
+<h1 class="game-title">
+Drive Pro 3D
+</h1>
+
+<a
+href="#"
+class="play-btn"
+id="playGameButton">
+PLAY GAME
+</a>
+
+</div>
+
+<div class="info">
+
+<h2>About Drive Pro 3D</h2>
+
+<p>
+Drive Pro 3D is a fast-paced arcade driving game where perfect timing is the key to success. Hold to accelerate, release to brake instantly, and carefully weave through busy traffic while avoiding dangerous obstacles. Every level becomes more challenging as your driving skills improve.
+</p>
+
+<p>
+Complete levels to earn coins and unlock stylish new vehicles with unique appearances. Whether you enjoy casual driving games or quick reflex challenges, Drive Pro 3D offers smooth gameplay and exciting action that is easy to learn but difficult to master.
+</p>
+
+<h2>Game Controls</h2>
+
+<p>
+
+Mouse Click / Tap — Hold to Accelerate<br>
+Release Mouse / Finger — Brake Instantly
+
+</p>
+
+<h2>Tips for Better Scores</h2>
+
+<ul>
+
+<li>Don't hold the accelerator continuously.</li>
+
+<li>Brake early before reaching heavy traffic.</li>
+
+<li>Watch moving vehicles carefully before crossing.</li>
+
+<li>Collect coins to unlock better-looking cars.</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<script>
+
+const playButton=document.getElementById("playGameButton");
+
+playButton.addEventListener("click",function(e){
+
+e.preventDefault();
+
+document.getElementById("gameContainer").innerHTML=`
+
+<div class="game-player">
+
+<iframe
+src="https://html5.gamemonetize.co/jqwz9v6dty5x1y6ug4cpb7xyjoimawu8/"
+allowfullscreen
+scrolling="no">
+</iframe>
+
+</div>
+
+`;
+
+});
+
+</script>
+
+</body>
+</html>

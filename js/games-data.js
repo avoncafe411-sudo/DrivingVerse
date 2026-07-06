@@ -247,6 +247,40 @@ window.games = [
     instructions: "Left Arrow - Move Left | Right Arrow - Move Right | Shoot Zombies",
 
     tags: "Zombie"
+},
+{
+    id: "74165",
+    slug: "drive-pro-3d",
+
+    title: "Drive Pro 3D",
+
+    category: "Racing",
+
+    rating: "4.8",
+
+    description: "Drive through busy roads, avoid traffic, unlock new cars, and master perfect timing in this addictive 3D driving game.",
+
+    image: "https://img.gamemonetize.com/jqwz9v6dty5x1y6ug4cpb7xyjoimawu8/512x384.jpg",
+
+    featured: true,
+    trending: true,
+    recent: true,
+    popular: true,
+
+    buttonText: "Play Now",
+
+    link: "games/drive-pro-3d.html",
+
+    detailUrl: "games/drive-pro-3d.html",
+
+    url: "https://html5.gamemonetize.co/jqwz9v6dty5x1y6ug4cpb7xyjoimawu8/",
+
+    width: "750",
+    height: "1334",
+
+    instructions: "Mouse click or tap to play",
+
+    tags: "Car"
 }
 ];
 
