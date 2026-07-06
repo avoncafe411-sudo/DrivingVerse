@@ -281,6 +281,40 @@ window.games = [
     instructions: "Mouse click or tap to play",
 
     tags: "Car"
+},
+{
+    id: "75175",
+    slug: "retro-x-racer",
+
+    title: "Retro X Racer",
+
+    category: "Racing",
+
+    rating: "4.8",
+
+    description: "Fly a futuristic jet at incredible speed, avoid giant towers, collect credits, and survive for the highest score in this retro-inspired arcade racer.",
+
+    image: "https://img.gamemonetize.com/n6uz0z9jcww93cq7k5nn8guh2244qc1j/512x384.jpg",
+
+    featured: true,
+    trending: true,
+    recent: true,
+    popular: true,
+
+    buttonText: "Play Now",
+
+    link: "games/retro-x-racer.html",
+
+    detailUrl: "games/retro-x-racer.html",
+
+    url: "https://html5.gamemonetize.co/n6uz0z9jcww93cq7k5nn8guh2244qc1j/",
+
+    width: "1920",
+    height: "1080",
+
+    instructions: "A / Left Arrow - Move Left | D / Right Arrow - Move Right",
+
+    tags: "Space"
 }
 ];
 
