@@ -315,6 +315,40 @@ window.games = [
     instructions: "A / Left Arrow - Move Left | D / Right Arrow - Move Right",
 
     tags: "Space"
+},
+{
+    id: "67815",
+    slug: "drive-zone",
+
+    title: "Drive Zone",
+
+    category: "Racing",
+
+    rating: "4.9",
+
+    description: "Drive through cities, rally tracks, and off-road environments in an exciting 3D driving simulator with realistic controls and multiple terrains.",
+
+    image: "https://img.gamemonetize.com/preebt8pchos3u8ul57dozj2gulh46ms/512x384.jpg",
+
+    featured: true,
+    trending: true,
+    recent: true,
+    popular: true,
+
+    buttonText: "Play Now",
+
+    link: "games/drive-zone.html",
+
+    detailUrl: "games/drive-zone.html",
+
+    url: "https://html5.gamemonetize.co/preebt8pchos3u8ul57dozj2gulh46ms/",
+
+    width: "800",
+    height: "600",
+
+    instructions: "W-Accelerate | S-Brake | A/D-Steer | C-Camera | Esc-Pause",
+
+    tags: "Driving"
 }
 ];
 

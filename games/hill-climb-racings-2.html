@@ -1,81 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-<title>HIll climb Racings 2 | DrivingVerse</title>
+<title>Hill Climb Racings 2 | DrivingVerse</title>
+
+<meta name="description" content="Play Hill Climb Racings 2 online for free. Drive across challenging hills, unlock vehicles, master realistic physics, and enjoy exciting off-road adventures directly in your browser.">
 
 <link rel="stylesheet" href="../css/style.css">
 
 <style>
+
 body{
-    font-family:Poppins,sans-serif;
-    margin:0;
-    background:#111827;
-    color:#fff;
+font-family:Poppins,sans-serif;
+margin:0;
+background:#111827;
+color:#fff;
 }
 
 .container{
-    max-width:1200px;
-    margin:auto;
-    padding:30px;
+max-width:1200px;
+margin:auto;
+padding:30px;
 }
 
 #gameContainer{
-    width:100%;
+width:100%;
 }
 
 .game-image{
-    width:100%;
-    max-width:900px;
-    display:block;
-    margin:auto;
-    border-radius:15px;
+width:100%;
+max-width:900px;
+display:block;
+margin:auto;
+border-radius:15px;
 }
 
 .game-title{
-    text-align:center;
-    margin:25px 0;
+text-align:center;
+margin:25px 0;
 }
 
 .play-btn{
-    display:block;
-    width:260px;
-    margin:25px auto;
-    padding:18px;
-    background:#ff4d00;
-    color:#fff;
-    text-align:center;
-    font-size:22px;
-    font-weight:bold;
-    text-decoration:none;
-    border-radius:12px;
+display:block;
+width:260px;
+margin:25px auto;
+padding:18px;
+background:#ff4d00;
+color:#fff;
+text-align:center;
+font-size:22px;
+font-weight:bold;
+text-decoration:none;
+border-radius:12px;
 }
 
 .play-btn:hover{
-    background:#ff6a00;
+background:#ff6a00;
 }
 
 .game-player{
-    width:100%;
-    aspect-ratio:16/9;
+width:100%;
+aspect-ratio:16/9;
 }
 
 .game-player iframe{
-    width:100%;
-    height:100%;
-    border:none;
-    border-radius:15px;
+width:100%;
+height:100%;
+border:none;
+border-radius:15px;
 }
 
 .info{
-    margin-top:40px;
-    background:#1f2937;
-    padding:25px;
-    border-radius:15px;
-    line-height:1.8;
+margin-top:40px;
+background:#1f2937;
+padding:25px;
+border-radius:15px;
+line-height:1.9;
 }
+
+.info h2{
+margin-top:30px;
+}
+
 </style>
 
 </head>
@@ -89,18 +99,16 @@ body{
 <img
 class="game-image"
 src="https://img.gamemonetize.com/1vxk8rfmkpin0l0ex7atiuftp6l3mu6p/512x384.jpg"
-alt="HIll climb Racings 2">
+alt="Hill Climb Racings 2">
 
 <h1 class="game-title">
-HIll climb Racings 2
+Hill Climb Racings 2
 </h1>
 
 <a
-href="https://www.hillclimbracing2.com/"
+href="#"
 class="play-btn"
-id="playGameButton"
-target="_blank"
-rel="noopener noreferrer">
+id="playGameButton">
 PLAY GAME
 </a>
 
@@ -108,21 +116,37 @@ PLAY GAME
 
 <div class="info">
 
-<h2>Description</h2>
+<h2>About Hill Climb Racings 2</h2>
 
 <p>
-Hill Climb Racings 2 is back, bigger, better and even more fun. Race across challenging hills, master realistic physics, unlock vehicles, and enjoy exciting adventures with smooth gameplay.
+Hill Climb Racings 2 is an exciting physics-based driving game where every hill becomes a challenge. Drive across rough terrain, collect rewards, unlock better vehicles, and improve your driving skills while keeping your vehicle balanced over steep slopes and dangerous obstacles.
+</p>
+
+<p>
+Each level introduces new terrain and exciting challenges that require precise acceleration and braking. Whether you enjoy casual driving games or competitive hill racing, this game offers hours of entertaining gameplay directly in your browser.
 </p>
 
 <h2>Controls</h2>
 
 <p>
-Mouse click or tap to play.
+
+Mouse Click or Tap to Play
+
 </p>
 
-<p>
-The embedded game host can be unavailable at times, so the button above opens the official game page directly.
-</p>
+<h2>Tips</h2>
+
+<ul>
+
+<li>Accelerate smoothly to avoid flipping.</li>
+
+<li>Balance your vehicle on steep hills.</li>
+
+<li>Collect coins whenever possible.</li>
+
+<li>Unlock better vehicles for improved performance.</li>
+
+</ul>
 
 </div>
 
@@ -135,10 +159,25 @@ const playButton=document.getElementById("playGameButton");
 playButton.addEventListener("click",function(e){
 
 e.preventDefault();
-	window.open(playButton.href, "_blank", "noopener,noreferrer");
+
+document.getElementById("gameContainer").innerHTML=`
+
+<div class="game-player">
+
+<iframe
+src="https://html5.gamemonetize.co/1vxk8rfmkpin0l0ex7atiuftp6l3mu6p/"
+allowfullscreen
+scrolling="no">
+</iframe>
+
+</div>
+
+`;
+
 });
 
 </script>
 
 </body>
+
 </html>
