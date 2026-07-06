@@ -213,6 +213,40 @@ window.games = [
     instructions: "W A S D or Arrow Keys - Move Truck | H - Horn | R - Reverse",
 
     tags: "Truck"
+},
+{
+    id: "79359",
+    slug: "zombie-road-drive",
+
+    title: "Zombie Road Drive",
+
+    category: "Shooting",
+
+    rating: "4.8",
+
+    description: "Drive through a zombie apocalypse, destroy undead enemies, dodge obstacles, and survive as long as possible in this action-packed driving shooter.",
+
+    image: "https://img.gamemonetize.com/2bbm11yqs7uksp09w0b5igmivyggct4k/512x384.jpg",
+
+    featured: true,
+    trending: true,
+    recent: true,
+    popular: true,
+
+    buttonText: "Play Now",
+
+    link: "games/zombie-road-drive.html",
+
+    detailUrl: "games/zombie-road-drive.html",
+
+    url: "https://html5.gamemonetize.co/2bbm11yqs7uksp09w0b5igmivyggct4k/",
+
+    width: "800",
+    height: "600",
+
+    instructions: "Left Arrow - Move Left | Right Arrow - Move Right | Shoot Zombies",
+
+    tags: "Zombie"
 }
 ];
 

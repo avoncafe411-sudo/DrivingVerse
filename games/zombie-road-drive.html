@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>Zombie Road Drive | Free Online Zombie Driving Game</title>
+
+<meta name="description" content="Play Zombie Road Drive online for free. Drive through endless zombie-filled highways, destroy undead enemies, avoid obstacles, and survive the apocalypse in this exciting browser game.">
+
+<link rel="stylesheet" href="../css/style.css">
+
+<style>
+body{
+font-family:Poppins,sans-serif;
+margin:0;
+background:#111827;
+color:#fff;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+padding:30px;
+}
+
+#gameContainer{
+width:100%;
+}
+
+.game-image{
+width:100%;
+max-width:900px;
+display:block;
+margin:auto;
+border-radius:15px;
+}
+
+.game-title{
+text-align:center;
+margin:25px 0;
+}
+
+.play-btn{
+display:block;
+width:260px;
+margin:25px auto;
+padding:18px;
+background:#ff4d00;
+color:#fff;
+text-align:center;
+font-size:22px;
+font-weight:bold;
+text-decoration:none;
+border-radius:12px;
+}
+
+.play-btn:hover{
+background:#ff6a00;
+}
+
+.game-player{
+width:100%;
+aspect-ratio:16/9;
+}
+
+.game-player iframe{
+width:100%;
+height:100%;
+border:none;
+border-radius:15px;
+}
+
+.info{
+margin-top:40px;
+background:#1f2937;
+padding:25px;
+border-radius:15px;
+line-height:1.8;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div id="gameContainer">
+
+<img
+class="game-image"
+src="https://img.gamemonetize.com/2bbm11yqs7uksp09w0b5igmivyggct4k/512x384.jpg"
+alt="Zombie Road Drive">
+
+<h1 class="game-title">
+Zombie Road Drive
+</h1>
+
+<a
+href="#"
+class="play-btn"
+id="playGameButton">
+PLAY GAME
+</a>
+
+</div>
+
+<div class="info">
+
+<h2>About Zombie Road Drive</h2>
+
+<p>
+Zombie Road Drive combines fast-paced driving with zombie survival action. Your vehicle never stops moving, so every second counts as you dodge wrecked cars, avoid dangerous obstacles, and eliminate waves of hungry zombies. Quick reactions and smart driving are the key to staying alive on the endless highway.
+</p>
+
+<p>
+Unlike traditional racing games, every run is different. The farther you travel, the more intense the zombie attacks become. Whether you enjoy driving games, action games, or survival challenges, Zombie Road Drive delivers an exciting arcade experience directly in your browser with no download required.
+</p>
+
+<h2>Game Controls</h2>
+
+<p>
+Left Arrow Key - Move Left<br>
+Right Arrow Key - Move Right<br>
+Shoot zombies while avoiding collisions.
+</p>
+
+<h2>Tips to Survive Longer</h2>
+
+<ul>
+<li>Stay near the center of the road whenever possible.</li>
+<li>Avoid unnecessary crashes because every collision reduces your vehicle's health.</li>
+<li>Destroy zombies before they get too close.</li>
+<li>Keep moving and react quickly to new obstacles.</li>
+</ul>
+
+</div>
+
+</div>
+
+<script>
+
+const playButton=document.getElementById("playGameButton");
+
+playButton.addEventListener("click",function(e){
+
+e.preventDefault();
+
+document.getElementById("gameContainer").innerHTML=`
+
+<div class="game-player">
+
+<iframe
+src="https://html5.gamemonetize.co/2bbm11yqs7uksp09w0b5igmivyggct4k/"
+allowfullscreen
+scrolling="no">
+</iframe>
+
+</div>
+
+`;
+
+});
+
+</script>
+
+</body>
+</html>
