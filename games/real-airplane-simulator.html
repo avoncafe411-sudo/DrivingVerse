@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>Real Airplane Simulator | DrivingVerse</title>
+
+<meta name="description" content="Play Real Airplane Simulator online for free. Fly realistic airplanes, complete airport missions, perform smooth takeoffs and landings, and become an expert virtual pilot.">
+
+<link rel="stylesheet" href="../css/style.css">
+
+<style>
+
+body{
+font-family:Poppins,sans-serif;
+margin:0;
+background:#111827;
+color:#fff;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+padding:30px;
+}
+
+#gameContainer{
+width:100%;
+}
+
+.game-image{
+width:100%;
+max-width:900px;
+display:block;
+margin:auto;
+border-radius:15px;
+}
+
+.game-title{
+text-align:center;
+margin:25px 0;
+}
+
+.play-btn{
+display:block;
+width:260px;
+margin:25px auto;
+padding:18px;
+background:#ff4d00;
+color:#fff;
+text-align:center;
+font-size:22px;
+font-weight:bold;
+text-decoration:none;
+border-radius:12px;
+}
+
+.play-btn:hover{
+background:#ff6a00;
+}
+
+.game-player{
+width:100%;
+aspect-ratio:16/9;
+}
+
+.game-player iframe{
+width:100%;
+height:100%;
+border:none;
+border-radius:15px;
+}
+
+.info{
+margin-top:40px;
+background:#1f2937;
+padding:25px;
+border-radius:15px;
+line-height:1.9;
+}
+
+.info h2{
+margin-top:30px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div id="gameContainer">
+
+<img
+class="game-image"
+src="https://img.gamemonetize.com/l2mrm0gwkvuj1g0qy0acw6fj7xnzxmas/512x384.jpg"
+alt="Real Airplane Simulator">
+
+<h1 class="game-title">
+Real Airplane Simulator
+</h1>
+
+<a
+href="#"
+class="play-btn"
+id="playGameButton">
+PLAY GAME
+</a>
+
+</div>
+
+<div class="info">
+
+<h2>About Real Airplane Simulator</h2>
+
+<p>
+Real Airplane Simulator lets you experience the excitement of becoming a virtual pilot. Fly different aircraft, complete airport missions, and improve your flying skills through realistic takeoff, landing, and navigation challenges. Every mission requires careful control and precision.
+</p>
+
+<p>
+Whether you're learning basic flight controls or practicing smooth landings, this browser-based flight simulator offers an enjoyable aviation experience without requiring any downloads. Unlock new airplanes and enjoy flying across detailed environments.
+</p>
+
+<h2>Game Controls</h2>
+
+<p>
+
+Follow the on-screen arrows and indicators.<br>
+
+Switch camera views for better flying control.
+
+</p>
+
+<h2>Flying Tips</h2>
+
+<ul>
+
+<li>Maintain a steady altitude while flying.</li>
+
+<li>Use camera switching to improve visibility.</li>
+
+<li>Follow navigation markers carefully.</li>
+
+<li>Practice smooth landings for better mission scores.</li>
+
+</ul>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Can I play Real Airplane Simulator for free?</h3>
+
+<p>
+Yes. The game runs directly in your browser without requiring installation.
+</p>
+
+<h3>Is this game suitable for beginners?</h3>
+
+<p>
+Yes. The controls are easy to understand while still providing realistic flight simulation gameplay.
+</p>
+
+</div>
+
+</div>
+
+<script>
+
+const playButton=document.getElementById("playGameButton");
+
+playButton.addEventListener("click",function(e){
+
+e.preventDefault();
+
+document.getElementById("gameContainer").innerHTML=`
+
+<div class="game-player">
+
+<iframe
+src="https://html5.gamemonetize.co/l2mrm0gwkvuj1g0qy0acw6fj7xnzxmas/"
+allowfullscreen
+scrolling="no">
+</iframe>
+
+</div>
+
+`;
+
+});
+
+</script>
+
+</body>
+
+</html>

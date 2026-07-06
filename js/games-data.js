@@ -349,6 +349,74 @@ window.games = [
     instructions: "W-Accelerate | S-Brake | A/D-Steer | C-Camera | Esc-Pause",
 
     tags: "Driving"
+},
+{
+    id: "47742",
+    slug: "real-airplane-simulator",
+
+    title: "Real Airplane Simulator",
+
+    category: "Action",
+
+    rating: "4.8",
+
+    description: "Fly realistic airplanes, complete airport missions, master takeoffs and landings, and become a professional pilot in this free online flight simulator.",
+
+    image: "https://img.gamemonetize.com/l2mrm0gwkvuj1g0qy0acw6fj7xnzxmas/512x384.jpg",
+
+    featured: true,
+    trending: true,
+    recent: true,
+    popular: true,
+
+    buttonText: "Play Now",
+
+    link: "games/real-airplane-simulator.html",
+
+    detailUrl: "games/real-airplane-simulator.html",
+
+    url: "https://html5.gamemonetize.co/l2mrm0gwkvuj1g0qy0acw6fj7xnzxmas/",
+
+    width: "1079",
+    height: "615",
+
+    instructions: "Follow the arrows | Switch camera views for better control",
+
+    tags: "Airplane"
+},
+{
+    id: "72062",
+    slug: "farm-simulator-township-game",
+
+    title: "Farm Simulator Township Game",
+
+    category: "Adventure",
+
+    rating: "4.8",
+
+    description: "Build your own farming empire by driving tractors, harvesting crops, managing fields, and expanding your modern township in this realistic farming simulator.",
+
+    image: "https://img.gamemonetize.com/iojkoe68zyjra4dxu5itysdy88dzqxt6/512x384.jpg",
+
+    featured: true,
+    trending: true,
+    recent: true,
+    popular: true,
+
+    buttonText: "Play Now",
+
+    link: "games/farm-simulator-township-game.html",
+
+    detailUrl: "games/farm-simulator-township-game.html",
+
+    url: "https://html5.gamemonetize.co/iojkoe68zyjra4dxu5itysdy88dzqxt6/",
+
+    width: "800",
+    height: "600",
+
+    instructions: "WASD or Arrow Keys to drive | Mouse to interact",
+
+    tags: "Farm"
 }
 ];
 

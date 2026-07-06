@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>Farm Simulator Township Game | DrivingVerse</title>
+
+<meta name="description" content="Play Farm Simulator Township Game online for free. Drive tractors, grow crops, harvest fields, manage your farm, and build a successful farming township directly in your browser.">
+
+<link rel="stylesheet" href="../css/style.css">
+
+<style>
+
+body{
+font-family:Poppins,sans-serif;
+margin:0;
+background:#111827;
+color:#fff;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+padding:30px;
+}
+
+#gameContainer{
+width:100%;
+}
+
+.game-image{
+width:100%;
+max-width:900px;
+display:block;
+margin:auto;
+border-radius:15px;
+}
+
+.game-title{
+text-align:center;
+margin:25px 0;
+}
+
+.play-btn{
+display:block;
+width:260px;
+margin:25px auto;
+padding:18px;
+background:#ff4d00;
+color:#fff;
+text-align:center;
+font-size:22px;
+font-weight:bold;
+text-decoration:none;
+border-radius:12px;
+}
+
+.play-btn:hover{
+background:#ff6a00;
+}
+
+.game-player{
+width:100%;
+aspect-ratio:16/9;
+}
+
+.game-player iframe{
+width:100%;
+height:100%;
+border:none;
+border-radius:15px;
+}
+
+.info{
+margin-top:40px;
+background:#1f2937;
+padding:25px;
+border-radius:15px;
+line-height:1.9;
+}
+
+.info h2{
+margin-top:30px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div id="gameContainer">
+
+<img
+class="game-image"
+src="https://img.gamemonetize.com/iojkoe68zyjra4dxu5itysdy88dzqxt6/512x384.jpg"
+alt="Farm Simulator Township Game">
+
+<h1 class="game-title">
+Farm Simulator Township Game
+</h1>
+
+<a
+href="#"
+class="play-btn"
+id="playGameButton">
+PLAY GAME
+</a>
+
+</div>
+
+<div class="info">
+
+<h2>About Farm Simulator Township Game</h2>
+
+<p>
+Farm Simulator Township Game offers a complete farming experience where you can drive tractors, cultivate land, harvest crops, and manage your own growing agricultural business. Begin with a small farm and gradually expand into a successful farming township using smart planning and efficient resource management.
+</p>
+
+<p>
+Operate realistic farming vehicles, complete daily farming tasks, and enjoy peaceful countryside environments while improving your farming skills. Whether you enjoy tractor driving, crop management, or simulation games, this title delivers an enjoyable farming adventure directly in your browser.
+</p>
+
+<h2>Game Controls</h2>
+
+<p>
+
+W / Up Arrow — Move Forward<br>
+
+S / Down Arrow — Reverse<br>
+
+A / Left Arrow — Turn Left<br>
+
+D / Right Arrow — Turn Right<br>
+
+Mouse — Interact with menus
+
+</p>
+
+<h2>Farming Tips</h2>
+
+<ul>
+
+<li>Harvest crops regularly for better income.</li>
+
+<li>Drive carefully to avoid wasting time.</li>
+
+<li>Expand your farmland whenever possible.</li>
+
+<li>Upgrade equipment to improve productivity.</li>
+
+</ul>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Is Farm Simulator Township Game free?</h3>
+
+<p>
+Yes. You can play the game online for free without downloading or installing anything.
+</p>
+
+<h3>Can I drive tractors in the game?</h3>
+
+<p>
+Yes. The game features tractor driving along with various farming activities and management tasks.
+</p>
+
+</div>
+
+</div>
+
+<script>
+
+const playButton=document.getElementById("playGameButton");
+
+playButton.addEventListener("click",function(e){
+
+e.preventDefault();
+
+document.getElementById("gameContainer").innerHTML=`
+
+<div class="game-player">
+
+<iframe
+src="https://html5.gamemonetize.co/iojkoe68zyjra4dxu5itysdy88dzqxt6/"
+allowfullscreen
+scrolling="no">
+</iframe>
+
+</div>
+
+`;
+
+});
+
+</script>
+
+</body>
+
+</html>
