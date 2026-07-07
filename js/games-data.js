@@ -454,6 +454,42 @@ window.games = [
     instructions: "W A S D - Drive | F - Nitro",
 
     tags: "Driving, Forest, Mountain, Offroad"
+},
+{
+    id: "38766",
+
+    slug: "tractor-driving-hill-climb-2d",
+
+    title: "Tractor Driving Hill Climb 2D",
+
+    category: "Racing",
+
+    rating: "4.6",
+
+    description: "Drive powerful tractors across challenging hills, steep roads, and countryside tracks. Complete levels, unlock new tractors, upgrade your vehicle, and enjoy realistic hill climbing physics directly in your browser.",
+
+    image: "https://img.gamemonetize.com/lj5yokv4v3k169cfmpf38bcxzclmltz8/512x384.jpg",
+
+    featured: true,
+    trending: false,
+    recent: true,
+    popular: false,
+
+    buttonText: "Play Now",
+
+    link: "games/tractor-driving-hill-climb-2d.html",
+
+    detailUrl: "games/tractor-driving-hill-climb-2d.html",
+
+    url: "https://html5.gamemonetize.co/lj5yokv4v3k169cfmpf38bcxzclmltz8/",
+
+    width: "800",
+
+    height: "600",
+
+    instructions: "W A S D - Drive Tractor",
+
+    tags: "Tractor, Driving, Hill Climb, 2D"
 }
 ];
 

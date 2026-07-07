@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>Tractor Driving Hill Climb 2D | DrivingVerse</title>
+
+<meta name="description" content="Play Tractor Driving Hill Climb 2D online for free. Drive tractors across hills, upgrade vehicles, complete levels and enjoy realistic tractor driving in your browser.">
+
+<link rel="canonical" href="https://avoncafe411-sudo.github.io/DrivingVerse/games/tractor-driving-hill-climb-2d.html">
+
+<link rel="stylesheet" href="../css/style.css">
+
+<style>
+
+body{
+font-family:Poppins,sans-serif;
+margin:0;
+background:#111827;
+color:#fff;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+padding:30px;
+}
+
+#gameContainer{
+width:100%;
+}
+
+.game-image{
+width:100%;
+max-width:900px;
+display:block;
+margin:auto;
+border-radius:15px;
+}
+
+.game-title{
+text-align:center;
+margin:25px 0;
+}
+
+.play-btn{
+display:block;
+width:260px;
+margin:25px auto;
+padding:18px;
+background:#ff4d00;
+color:#fff;
+text-align:center;
+font-size:22px;
+font-weight:bold;
+text-decoration:none;
+border-radius:12px;
+}
+
+.play-btn:hover{
+background:#ff6a00;
+}
+
+.game-player{
+width:100%;
+aspect-ratio:16/9;
+}
+
+.game-player iframe{
+width:100%;
+height:100%;
+border:none;
+border-radius:15px;
+}
+
+.info{
+margin-top:40px;
+background:#1f2937;
+padding:25px;
+border-radius:15px;
+line-height:1.8;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div id="gameContainer">
+
+<img
+class="game-image"
+src="https://img.gamemonetize.com/lj5yokv4v3k169cfmpf38bcxzclmltz8/512x384.jpg"
+alt="Tractor Driving Hill Climb 2D">
+
+<h1 class="game-title">
+Tractor Driving Hill Climb 2D
+</h1>
+
+<a
+href="#"
+class="play-btn"
+id="playGameButton">
+PLAY GAME
+</a>
+
+</div>
+
+<div class="info">
+
+<h2>Description</h2>
+
+<p>
+
+Tractor Driving Hill Climb 2D is a fun tractor driving game where you must carefully climb steep hills, balance your tractor, and complete exciting countryside levels. Earn points to unlock new tractors, improve performance, and conquer increasingly difficult terrain. The simple controls and realistic hill climbing physics make every level enjoyable for players of all ages.
+
+</p>
+
+<h2>Controls</h2>
+
+<p>
+
+W A S D — Drive Tractor
+
+</p>
+
+<h2>Game Features</h2>
+
+<ul>
+
+<li>Realistic 2D hill climbing gameplay.</li>
+
+<li>Unlock multiple tractors.</li>
+
+<li>Upgrade your vehicles.</li>
+
+<li>Smooth browser gameplay.</li>
+
+<li>Free to play with no download required.</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<script>
+
+const playButton=document.getElementById("playGameButton");
+
+playButton.addEventListener("click",function(e){
+
+e.preventDefault();
+
+document.getElementById("gameContainer").innerHTML=`
+
+<div id="gamePlayer" class="game-player" style="position:relative;">
+
+<button id="fullscreenBtn"
+
+style="
+
+position:absolute;
+top:12px;
+right:12px;
+z-index:999;
+padding:10px 14px;
+background:#ff4d00;
+color:white;
+border:none;
+border-radius:8px;
+cursor:pointer;
+font-size:18px;
+
+">
+
+⛶
+
+</button>
+
+<iframe
+
+src="https://html5.gamemonetize.co/lj5yokv4v3k169cfmpf38bcxzclmltz8/"
+
+allowfullscreen
+
+scrolling="no">
+
+</iframe>
+
+</div>
+
+`;
+
+const fullscreenBtn=document.getElementById("fullscreenBtn");
+
+fullscreenBtn.addEventListener("click",function(){
+
+const player=document.getElementById("gamePlayer");
+
+if(player.requestFullscreen){
+
+player.requestFullscreen();
+
+}
+else if(player.webkitRequestFullscreen){
+
+player.webkitRequestFullscreen();
+
+}
+else if(player.msRequestFullscreen){
+
+player.msRequestFullscreen();
+
+}
+
+});
+
+});
+
+</script>
+
+</body>
+</html>

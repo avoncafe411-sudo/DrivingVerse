@@ -132,46 +132,30 @@ playButton.addEventListener("click",function(e){
 
 e.preventDefault();
 
-document.getElementById("gameContainer").innerHTML=`
-
+document.getElementById("gameContainer").innerHTML = `
 <div id="gamePlayer" class="game-player" style="position:relative;">
-
-<button id="fullscreenBtn"
-style="
-position:absolute;
-top:12px;
-right:12px;
-z-index:999;
-padding:10px 14px;
-background:#ff4d00;
-color:white;
-border:none;
-border-radius:8px;
-cursor:pointer;
-font-size:18px;
-">
-
-⛶
-
-</button>
-
-<iframe
-src="https://html5.gamemonetize.co/wtmr1ws4khywnki9fm53csa0txss21tb/"
-allowfullscreen
-scrolling="no">
-</iframe>
-
+  <button id="fullscreenBtn"
+    style="
+      position:absolute;
+      top:12px;
+      right:12px;
+      z-index:999;
+      padding:10px 14px;
+      background:#ff4d00;
+      color:white;
+      border:none;
+      border-radius:8px;
+      cursor:pointer;
+      font-size:18px;
+    ">
+    ⛶
+  </button>
+  <iframe
+    src="https://html5.gamemonetize.co/wtmr1ws4khywnki9fm53csa0txss21tb/"
+    allowfullscreen
+    scrolling="no">
+  </iframe>
 </div>
-
-`;
-<iframe
-src="https://html5.gamemonetize.co/ic8o64eot1bewdh0e2l8b0ong4y9j1q0/"
-allowfullscreen
-scrolling="no">
-</iframe>
-
-</div>
-
 `;
 
 });
