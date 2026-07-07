@@ -417,6 +417,43 @@ window.games = [
     instructions: "WASD or Arrow Keys to drive | Mouse to interact",
 
     tags: "Farm"
+},
+
+{
+    id: "52664",
+
+    slug: "offroad-mountain-driving-2024",
+
+    title: "Offroad Mountain Driving 2024",
+
+    category: "Action",
+
+    rating: "4.7",
+
+    description: "Drive powerful off-road vehicles across mountains, forests, muddy trails, and snowy roads. Test your driving skills on challenging terrain and complete exciting off-road missions.",
+
+    image: "https://img.gamemonetize.com/grnjvd7zlbj5ns8v2y3gx724h8bpsqyt/512x384.jpg",
+
+    featured: true,
+    trending: false,
+    recent: true,
+    popular: false,
+
+    buttonText: "Play Now",
+
+    link: "games/offroad-mountain-driving-2024.html",
+
+    detailUrl: "games/offroad-mountain-driving-2024.html",
+
+    url: "https://html5.gamemonetize.co/grnjvd7zlbj5ns8v2y3gx724h8bpsqyt/",
+
+    width: "800",
+
+    height: "600",
+
+    instructions: "W A S D - Drive | F - Nitro",
+
+    tags: "Driving, Forest, Mountain, Offroad"
 }
 ];
 
