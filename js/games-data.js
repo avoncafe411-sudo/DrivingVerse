@@ -490,6 +490,78 @@ window.games = [
     instructions: "W A S D - Drive Tractor",
 
     tags: "Tractor, Driving, Hill Climb, 2D"
+},
+{
+    id: "79960",
+
+    slug: "monster-truck-offroad",
+
+    title: "Monster Truck Offroad",
+
+    category: "Racing",
+
+    rating: "4.8",
+
+    description: "Drive gigantic monster trucks across muddy roads, rocky mountains, and off-road tracks. Crush cars, destroy obstacles, perform huge jumps, and complete exciting off-road racing challenges directly in your browser.",
+
+    image: "https://img.gamemonetize.com/a3jgsz6mwp6ygkkc79pga3s4k9st3i43/512x384.jpg",
+
+    featured: true,
+    trending: true,
+    recent: true,
+    popular: false,
+
+    buttonText: "Play Now",
+
+    link: "games/monster-truck-offroad.html",
+
+    detailUrl: "games/monster-truck-offroad.html",
+
+    url: "https://html5.gamemonetize.co/a3jgsz6mwp6ygkkc79pga3s4k9st3i43/",
+
+    width: "900",
+
+    height: "600",
+
+    instructions: "Arrow Keys - Drive | Space - Jump / Crush",
+
+    tags: "Monster Truck, Offroad, Racing"
+},
+{
+    id: "76019",
+
+    slug: "police-chase-car-simulator",
+
+    title: "Police Chase Car Simulator",
+
+    category: "Racing",
+
+    rating: "4.8",
+
+    description: "Become a police officer and chase dangerous criminals through busy city streets. Complete police escort missions, traffic inspections, border security checks, and high-speed pursuits in this realistic police driving simulator.",
+
+    image: "https://img.gamemonetize.com/1hf3m6hqeubtwjyibxy2p5qvlr0rk955/512x384.jpg",
+
+    featured: true,
+    trending: true,
+    recent: true,
+    popular: false,
+
+    buttonText: "Play Now",
+
+    link: "games/police-chase-car-simulator.html",
+
+    detailUrl: "games/police-chase-car-simulator.html",
+
+    url: "https://html5.gamemonetize.co/1hf3m6hqeubtwjyibxy2p5qvlr0rk955/",
+
+    width: "800",
+
+    height: "600",
+
+    instructions: "W A S D - Drive Police Car",
+
+    tags: "Police, Car, Driving, Simulator"
 }
 ];
 
