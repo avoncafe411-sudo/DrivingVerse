@@ -670,6 +670,42 @@ window.games = [
     instructions: "W A S D - Drive | Shift - Nitro | Space - Handbrake",
 
     tags: "3D, Car, Racing"
+},
+{
+    id: "49298",
+
+    slug: "villager-bus-simulator",
+
+    title: "Villager Bus Simulator",
+
+    category: "Racing",
+
+    rating: "4.7",
+
+    description: "Drive a realistic village passenger bus, pick up and drop passengers safely, explore countryside roads and enjoy an authentic bus driving simulator directly in your browser.",
+
+    image: "https://img.gamemonetize.com/6l7u09bxixpyld5le78bxzdzi41c1opd/512x384.jpg",
+
+    featured: true,
+    trending: true,
+    recent: true,
+    popular: false,
+
+    buttonText: "Play Now",
+
+    link: "games/villager-bus-simulator.html",
+
+    detailUrl: "games/villager-bus-simulator.html",
+
+    url: "https://html5.gamemonetize.co/6l7u09bxixpyld5le78bxzdzi41c1opd/",
+
+    width: "800",
+
+    height: "600",
+
+    instructions: "W - Accelerate | S - Brake | R - Reverse | Shift - Gear | C - Camera",
+
+    tags: "Bus, Driving, Simulator"
 }
 ];
 
