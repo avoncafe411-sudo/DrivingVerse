@@ -51,6 +51,13 @@ img {
   max-width: 100%;
 }
 
+.site-logo {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  margin-right: 10px;
+}
+
 button,
 input {
   font: inherit;
