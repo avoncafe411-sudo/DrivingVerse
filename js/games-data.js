@@ -706,6 +706,78 @@ window.games = [
     instructions: "W - Accelerate | S - Brake | R - Reverse | Shift - Gear | C - Camera",
 
     tags: "Bus, Driving, Simulator"
+},
+{
+    id: "48276",
+
+    slug: "usa-truck-simulator-2024",
+
+    title: "USA Truck Simulator 2024",
+
+    category: "Racing",
+
+    rating: "4.8",
+
+    description: "Drive powerful American trucks through forests, countryside roads and off-road routes while transporting cattle safely to their destinations. Enjoy realistic truck driving physics and immersive missions in USA Truck Simulator 2024.",
+
+    image: "https://img.gamemonetize.com/fegihrwp2dcnmzxjl10wseojln60zr2a/512x384.jpg",
+
+    featured: true,
+    trending: true,
+    recent: true,
+    popular: false,
+
+    buttonText: "Play Now",
+
+    link: "games/usa-truck-simulator-2024.html",
+
+    detailUrl: "games/usa-truck-simulator-2024.html",
+
+    url: "https://html5.gamemonetize.co/fegihrwp2dcnmzxjl10wseojln60zr2a/",
+
+    width: "960",
+
+    height: "600",
+
+    instructions: "Arrow Keys - Drive | C - Change Camera",
+
+    tags: "Truck, Simulator, Driving"
+},
+{
+    id: "45459",
+
+    slug: "turbo-drift-2023",
+
+    title: "Turbo Drift 2023",
+
+    category: "Racing",
+
+    rating: "4.9",
+
+    description: "Master high-speed drifting, race powerful supercars, conquer challenging tracks and experience realistic driving physics in Turbo Drift 2023. Play free online on DrivingVerse.",
+
+    image: "https://img.gamemonetize.com/a366pawhpkeuyzufatuklcgtduorfcs6/512x384.jpg",
+
+    featured: true,
+    trending: true,
+    recent: true,
+    popular: true,
+
+    buttonText: "Play Now",
+
+    link: "games/turbo-drift-2023.html",
+
+    detailUrl: "games/turbo-drift-2023.html",
+
+    url: "https://html5.gamemonetize.co/a366pawhpkeuyzufatuklcgtduorfcs6/",
+
+    width: "800",
+
+    height: "600",
+
+    instructions: "W A S D - Drive",
+
+    tags: "Drift, Racing, Supercars"
 }
 ];
 
