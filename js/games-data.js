@@ -634,6 +634,42 @@ window.games = [
     instructions: "W A S D - Drive | Camera - Change View | Headlights - Toggle Lights",
 
     tags: "Open World, Car, Driving"
+},
+{
+    id: "51905",
+
+    slug: "water-city-racers",
+
+    title: "Water City Racers",
+
+    category: "Racing",
+
+    rating: "4.8",
+
+    description: "Drive high-performance sports cars across futuristic water-themed highways, perform incredible stunts, race against opponents and enjoy realistic 3D driving physics in Water City Racers. Play free online on DrivingVerse.",
+
+    image: "https://img.gamemonetize.com/0vvdg2deu0564yo8g4x3ed4yf16n60si/512x384.jpg",
+
+    featured: true,
+    trending: true,
+    recent: true,
+    popular: false,
+
+    buttonText: "Play Now",
+
+    link: "games/water-city-racers.html",
+
+    detailUrl: "games/water-city-racers.html",
+
+    url: "https://html5.gamemonetize.co/0vvdg2deu0564yo8g4x3ed4yf16n60si/",
+
+    width: "800",
+
+    height: "450",
+
+    instructions: "W A S D - Drive | Shift - Nitro | Space - Handbrake",
+
+    tags: "3D, Car, Racing"
 }
 ];
 
