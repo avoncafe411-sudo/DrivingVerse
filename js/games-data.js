@@ -598,6 +598,42 @@ window.games = [
     instructions: "Move Forward / Backward using the game controls.",
 
     tags: "Motorcycle, Moto, Racing"
+},
+{
+    id: "69053",
+
+    slug: "openworld-racing",
+
+    title: "Openworld Racing",
+
+    category: "Racing",
+
+    rating: "4.8",
+
+    description: "Drive freely across a huge open world with realistic cars, smooth controls, drifting, day and night cycles, multiple camera views and exciting exploration. Play Openworld Racing online for free on DrivingVerse.",
+
+    image: "https://img.gamemonetize.com/8bun03rapg7jsazspo0oc80cnxj3cjjs/512x384.jpg",
+
+    featured: true,
+    trending: true,
+    recent: true,
+    popular: false,
+
+    buttonText: "Play Now",
+
+    link: "games/openworld-racing.html",
+
+    detailUrl: "games/openworld-racing.html",
+
+    url: "https://html5.gamemonetize.co/8bun03rapg7jsazspo0oc80cnxj3cjjs/",
+
+    width: "800",
+
+    height: "600",
+
+    instructions: "W A S D - Drive | Camera - Change View | Headlights - Toggle Lights",
+
+    tags: "Open World, Car, Driving"
 }
 ];
 
