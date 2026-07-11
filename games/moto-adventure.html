@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>Moto Adventure - Play Free Motorcycle Racing Game | DrivingVerse</title>
+
+<meta name="description" content="Play Moto Adventure online for free. Ride your motorcycle across exciting tracks, overcome obstacles, balance your bike and complete adventurous racing levels directly in your browser.">
+
+<link rel="canonical" href="https://avoncafe411-sudo.github.io/DrivingVerse/games/moto-adventure.html">
+
+<link rel="stylesheet" href="../css/style.css">
+
+<style>
+
+body{
+font-family:Poppins,sans-serif;
+margin:0;
+background:#111827;
+color:#fff;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+padding:30px;
+}
+
+#gameContainer{
+width:100%;
+}
+
+.game-image{
+width:100%;
+max-width:900px;
+display:block;
+margin:auto;
+border-radius:15px;
+}
+
+.game-title{
+text-align:center;
+margin:25px 0;
+}
+
+.play-btn{
+display:block;
+width:260px;
+margin:25px auto;
+padding:18px;
+background:#ff4d00;
+color:#fff;
+text-align:center;
+font-size:22px;
+font-weight:bold;
+text-decoration:none;
+border-radius:12px;
+}
+
+.play-btn:hover{
+background:#ff6a00;
+}
+
+.game-player{
+width:100%;
+aspect-ratio:16/9;
+}
+
+.game-player iframe{
+width:100%;
+height:100%;
+border:none;
+border-radius:15px;
+}
+
+.info{
+margin-top:40px;
+background:#1f2937;
+padding:25px;
+border-radius:15px;
+line-height:1.8;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div id="gameContainer">
+
+<img
+class="game-image"
+src="https://img.gamemonetize.com/ifiockt551pv3vcfrsplz20ztctyk149/512x384.jpg"
+alt="Moto Adventure">
+
+<h1 class="game-title">
+
+Moto Adventure
+
+</h1>
+
+<a
+href="#"
+class="play-btn"
+id="playGameButton">
+
+PLAY GAME
+
+</a>
+
+</div>
+
+<div class="info">
+
+<h2>Description</h2>
+
+<p>
+
+Moto Adventure is a fun motorcycle racing game where you ride across adventurous tracks filled with hills, ramps and obstacles. Balance your bike carefully, avoid crashing, and reach the finish line while enjoying colorful environments and smooth gameplay. Every level introduces new challenges that test your timing and riding skills.
+
+</p>
+
+<h2>Controls</h2>
+
+<p>
+
+Move Forward
+
+<br>
+
+Move Backward
+
+<br>
+
+Balance the Motorcycle
+
+</p>
+
+<h2>Game Features</h2>
+
+<ul>
+
+<li>Simple and addictive motorcycle gameplay.</li>
+
+<li>Adventure-themed racing levels.</li>
+
+<li>Smooth bike controls.</li>
+
+<li>Colorful HD graphics.</li>
+
+<li>Play instantly in your browser.</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<script>
+
+const playButton=document.getElementById("playGameButton");
+
+playButton.addEventListener("click",function(e){
+
+e.preventDefault();
+
+document.getElementById("gameContainer").innerHTML=`
+
+<div id="gamePlayer" class="game-player" style="position:relative;">
+
+<button id="fullscreenBtn"
+
+style="
+position:absolute;
+top:12px;
+right:12px;
+z-index:999;
+padding:10px 14px;
+background:#ff4d00;
+color:white;
+border:none;
+border-radius:8px;
+cursor:pointer;
+font-size:18px;
+">
+
+⛶
+
+</button>
+
+<iframe
+src="https://html5.gamemonetize.co/ifiockt551pv3vcfrsplz20ztctyk149/"
+allowfullscreen
+scrolling="no">
+</iframe>
+
+</div>
+
+`;
+
+const fullscreenBtn=document.getElementById("fullscreenBtn");
+
+fullscreenBtn.addEventListener("click",function(){
+
+const player=document.getElementById("gamePlayer");
+
+if(player.requestFullscreen){
+
+player.requestFullscreen();
+
+}
+else if(player.webkitRequestFullscreen){
+
+player.webkitRequestFullscreen();
+
+}
+else if(player.msRequestFullscreen){
+
+player.msRequestFullscreen();
+
+}
+
+});
+
+});
+
+</script>
+
+</body>
+</html>

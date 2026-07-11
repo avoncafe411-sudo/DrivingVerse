@@ -562,6 +562,42 @@ window.games = [
     instructions: "W A S D - Drive Police Car",
 
     tags: "Police, Car, Driving, Simulator"
+},
+{
+    id: "79104",
+
+    slug: "moto-adventure",
+
+    title: "Moto Adventure",
+
+    category: "Racing",
+
+    rating: "4.8",
+
+    description: "Ride through exciting adventure tracks on your motorcycle, overcome tricky obstacles, conquer challenging hills, and race to the finish line in this fun browser motorcycle game.",
+
+    image: "https://img.gamemonetize.com/ifiockt551pv3vcfrsplz20ztctyk149/512x384.jpg",
+
+    featured: true,
+    trending: true,
+    recent: true,
+    popular: false,
+
+    buttonText: "Play Now",
+
+    link: "games/moto-adventure.html",
+
+    detailUrl: "games/moto-adventure.html",
+
+    url: "https://html5.gamemonetize.co/ifiockt551pv3vcfrsplz20ztctyk149/",
+
+    width: "1280",
+
+    height: "720",
+
+    instructions: "Move Forward / Backward using the game controls.",
+
+    tags: "Motorcycle, Moto, Racing"
 }
 ];
 
